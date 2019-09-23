@@ -22,7 +22,9 @@ session_start();
                     <td></td>
                     <td><a href=''><img id="logo" src="images/aussieart_logo2.png" width="400px" height="120px"></a></td>
                     <td>
-                        <p id="greeting"><?php echo "Login as ". $_SESSION["usernamel"]?></p>
+                        <p id="greeting">
+                            <?php echo "Login as ". $_SESSION["usernamel"]?>
+                        </p>
                     </td>
                 </tr>
             </table>
@@ -59,52 +61,39 @@ session_start();
                 <td class="body-content">
                     <!--Main Content-->
 
-                    
-                    
-                    
-                    <div class ="home">
-                    
-                    <table>
-                        <tr>
-                        <td></td>
-                            <td><label id = "home-label">Best selling Artist</label></td>
-                        <td></td>
-                        </tr>
-                        <tr>
-                        <td><img src="images/TjapT-1.jpg" width="300px" height="300px"></td>
-                        <td><img src="images/TjapT-2.jpg" width="300px" height="300px"></td>
-                        <td><img src="images/TjapT-3.jpg" width="300px" height="300px"></td>
-                        </tr>
-                        <tr>
-                        <td></td>
-                            <td><label id = "home-label">Best selling Artist</label></td>
-                        <td></td>
-                        </tr>
-                        <tr>
-                        <td><img src="images/TjapT-1.jpg" width="300px" height="300px"></td>
-                        <td><img src="images/TjapT-1.jpg" width="300px" height="300px"></td>
-                        <td><img src="images/TjapT-1.jpg" width="300px" height="300px"></td>
-                        </tr>
-                    </table>
-                    
+                    <div class="home-table">
+                        <label id="home-label"><i>"This is where the mission statment will appear."</i></label>
+                        <label id="home-label">Browse by theme</label>
+                        <table>
+                            <tr>
+                                <td><img src="images/TjapT-1.jpg" width="270px" height="270px"></td>
+                                <td><img src="images/TjapT-2.jpg" width="270px" height="270px"></td>
+                                <td><img src="images/TjapT-3.jpg" width="270px" height="270px"></td>
+                            </tr>
+                        </table>
+
+                        <label id="home-label">Best selling Artist</label>
+                        <label id="home-label"><strong>Ann Thompson</strong></label>
+                        <table>
+                            <tr>
+                                <td><img src="images/ThomA-1.jpg" width="270px" height="270px"></td>
+                                <td><img src="images/ThomA-2.jpg" width="270px" height="270px"></td>
+                                <td><img src="images/ThomA-3.jpg" width="270px" height="270px"></td>
+                            </tr>
+                        </table>
+
                     </div>
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
+
+
+
+
                 </td>
                 <td class="body-spacing"></td>
             </tr>
         </table>
     </body>
     <!--End of Content-->
-     <footer>
+    <footer>
         <!--Footer-->
         <nav class="footer-bar">
             <!--Footer Navigation Bar-->
