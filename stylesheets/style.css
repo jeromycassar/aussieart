@@ -305,22 +305,51 @@ body{
 .body-content h2{
   text-align:center;
 }
-.login-form, .body-content h2{
+.login-form, .body-content h2, .register-form{
   font-family:header;
   color:rgb(175, 86, 92);
 }
-.login-form input[type=text]{
+.login-form input[type=text], .register-form input{
   border:1px solid rgb(175, 86, 92);
   padding:3px 5px;
   border-radius:5px;
   transition:0.6s;
 }
-.login-form input[type=text]:hover{
+.login-form input[type=text]:hover, .register-form input:hover{
   background-color:rgb(249, 221, 224);
   transition:0.6s;
 }
-.login-form input[type=text]:focus{
+.login-form input[type=text]:focus, .register-form input:focus{
   outline:none;
   background-color:white;
 }
 /*End of Login Styles*/
+
+/*Register Styles*/
+.register-form{
+  display:grid;
+  place-items:center;
+  padding:10px;
+  grid-template-columns:150px 185px;
+  grid-template-rows:
+    auto
+    auto;
+  grid-template-areas:
+  "label input"
+  "div div";
+}
+  .label{
+    padding:20px;
+    grid-area:label;
+    text-align:right;
+  }
+  .input{
+    padding:20px;
+    grid-area:input;
+    text-align:left;
+  }
+  .submit-div{
+    grid-area:div;
+    padding:20px;
+  }
+/*End of Register Styles*/
