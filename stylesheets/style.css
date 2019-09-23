@@ -378,3 +378,17 @@ body{
   cursor:pointer;
 }
 /*End of Products Page Style*/
+
+/*About Us Page Styles*/
+h3{
+  font-family:header;
+  font-weight:bold;
+  color:rgb(175, 86, 92);
+}
+.italic{
+  font-style:italic;
+}
+p, .italic{
+  font-family:header;
+}
+/*End of About Us Page Styles*/
