@@ -32,7 +32,7 @@ session_start();
         <nav class="nav-bar">
             <!--Navigation Bar-->
             <a href="home.php">home</a>
-            <a href="home.php">products</a>
+            <a href="products.php">products</a>
             <a href="home.php">help</a>
             <div class="topnav-centered">
                 <form id="search" method="POST">
@@ -68,7 +68,12 @@ session_start();
                             <tr>
                                 <td><img src="images/TjapT-1.jpg" width="270px" height="270px"></td>
                                 <td><img src="images/TjapT-2.jpg" width="270px" height="270px"></td>
-                                <td><img src="images/TjapT-3.jpg" width="270px" height="270px"></td>
+                                <td><img src="images/ThomA-3.jpg" width="270px" height="270px"></td>
+                            </tr>
+                            <tr>
+                                <td><label id="home-label">Culture</label></td>
+                                <td><label id="home-label">Pattern</label></td>
+                                <td><label id="home-label">Abstract</label></td>
                             </tr>
                         </table>
 
