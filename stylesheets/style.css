@@ -137,7 +137,7 @@ footer{
     border-radius:5px;
     width:7px;
     vertical-align: top;
-    
+
     margin-top:-5px;
     margin-left:-5px;
     right:0;
@@ -193,7 +193,7 @@ footer{
     float:none;
     display:block;
   }
-  
+
   .topnav-centered a {
     position:relative;
     top:0;
@@ -243,7 +243,6 @@ body{
 }
 .prod-container{
   overflow-wrap:break-word;
-  margin:auto auto;
   display:grid;
   grid-template-columns:220px 560px;
   grid-template-rows:auto;
@@ -296,3 +295,32 @@ body{
   transition:0.4s;
 }
 /*End of Input/Button Styles*/
+
+/*Login Styles*/
+.login-form{
+  display:grid;
+  place-items:center;
+  padding:10px;
+}
+.body-content h2{
+  text-align:center;
+}
+.login-form, .body-content h2{
+  font-family:header;
+  color:rgb(175, 86, 92);
+}
+.login-form input[type=text]{
+  border:1px solid rgb(175, 86, 92);
+  padding:3px 5px;
+  border-radius:5px;
+  transition:0.6s;
+}
+.login-form input[type=text]:hover{
+  background-color:rgb(249, 221, 224);
+  transition:0.6s;
+}
+.login-form input[type=text]:focus{
+  outline:none;
+  background-color:white;
+}
+/*End of Login Styles*/

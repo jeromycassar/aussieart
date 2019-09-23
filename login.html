@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head> <!--Head-->
+  <title>aussieart - Home</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/CSS" href="stylesheets/style.css">
+  <script src="script.js" type="text/javascript"></script>
+</head><!--End of head-->
+<div class="wrapper"><!--Wrapper-->
+  <header><!--Header-->
+      <div class="top"><!--Logo and Login-->
+          <table id="header-table">
+              <tr>
+                  <td></td>
+                  <td><img id="logo" src="images/aussieart_logo2.png" width="400px" height="120px"></td>
+                  <td><p id="greeting"></p></td>
+              </tr>
+          </table>
+      </div>
+      <nav class="nav-bar"><!--Navigation Bar-->
+
+  </header><!--End of header-->
+  <body><!--Content-->
+      <table id="content-table">
+          <tr>
+              <td class="body-spacing"></td>
+              <td class="body-content"><!--Main Content-->
+                <h2>Login</h2>
+                <br>
+                <form class="login-form" name="login" action="" method="POST" onsubmit="return validateform()">
+                  <label for="username1">Username</label>
+                  <input type="text" name="usernamel" id="usernamel" class="input-login" required>
+                  <br />
+                  <label for="password1">Password</label>
+                  <input type="text" name="passwordl" id="passwordl" class="input-login" required>
+                  <br />
+                  <p>Don't have an account? <a href="">Register</a></p><br>
+                  <button class="btn" id="submit" type="submit">Login</button>
+                </form>
+              </td>
+              <td class="body-spacing"></td>
+          </tr>
+      </table>
+  </body><!--End of Content-->
+  <footer><!--Footer-->
+    <nav class="footer-bar"><!--Footer Navigation Bar-->
+
+    </nav><!--End of Footer Navigation Bar-->
+  </footer><!--End of Footer-->
+</div><!--End of wrapper-->
+</html><!--End of html-->
