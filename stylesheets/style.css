@@ -302,9 +302,9 @@ body{
   place-items:center;
   padding:10px;
 }
-.body-content h2{
-  text-align:center;
-}
+
+.body-content h2{text-align:center;}
+
 .login-form, .body-content h2, .register-form{
   font-family:header;
   color:rgb(175, 86, 92);
@@ -329,8 +329,9 @@ body{
 .register-form{
   display:grid;
   place-items:center;
+  justify-content:center;
   padding:10px;
-  grid-template-columns:150px 185px;
+  grid-template-columns:200px 185px;
   grid-template-rows:
     auto
     auto;
