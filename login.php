@@ -28,7 +28,7 @@ session_start();
             </table>
         </div>
         <nav class="nav-bar">
-            
+
         </nav>
         <!--End of Navigation Bar-->
     </header>
@@ -42,14 +42,16 @@ session_start();
                 <td class="body-content">
                     <!--Main Content-->
                     <h2>Login</h2>
-
-                    <form name="login" method="POST" onsubmit="return validateform()">
-                        Username: <input type="text" name="usernamel" id="usernamel">
-                        <br /><br />
-                        Password: <input type="text" name="passwordl" id="passwordl">
-                        <br /><br />
+                    <br>
+                    <form class="login-form" name="login" action="" method="POST" onsubmit="return validateform()">
+                        <label for="username1">Username</label>
+                        <input type="text" name="usernamel" id="usernamel" class="input-login" required>
+                        <br />
+                        <label for="password1">Password</label>
+                        <input type="text" name="passwordl" id="passwordl" class="input-login" required>
+                        <br />
+                        <p>Don't have an account? <a href="register.php">Register</a></p><br>
                         <button class="btn" id="submit" type="submit">Login</button>
-                        <a href="register.php">Register</a>
                     </form>
                     <script>
                         function validateform() {
@@ -132,7 +134,7 @@ session_start();
         <!--Footer-->
         <nav class="footer-bar">
             <!--Footer Navigation Bar-->
-            
+
         </nav>
         <!--End of Footer Navigation Bar-->
     </footer>

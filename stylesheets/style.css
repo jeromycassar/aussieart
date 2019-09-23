@@ -137,7 +137,7 @@ footer{
     border-radius:5px;
     width:7px;
     vertical-align: top;
-    
+
     margin-top:-5px;
     margin-left:-5px;
     right:0;
@@ -193,7 +193,7 @@ footer{
     float:none;
     display:block;
   }
-  
+
   .topnav-centered a {
     position:relative;
     top:0;
@@ -238,6 +238,9 @@ body{
 /*End of Footer Layout*/
 
 /*Individual Product Styles*/
+.prod-wrapper{
+  margin:0 auto;
+}
 .prod-container{
   overflow-wrap:break-word;
   display:grid;
@@ -292,3 +295,59 @@ body{
   transition:0.4s;
 }
 /*End of Input/Button Styles*/
+
+/*Login Styles*/
+.login-form{
+  display:grid;
+  place-items:center;
+  padding:10px;
+}
+
+.body-content h2{text-align:center;}
+
+.login-form, .body-content h2, .register-form{
+  font-family:header;
+  color:rgb(175, 86, 92);
+}
+.login-form input[type=text], .register-form input{
+  border:1px solid rgb(175, 86, 92);
+  padding:3px 5px;
+  border-radius:5px;
+  transition:0.6s;
+}
+.login-form input[type=text]:hover, .register-form input:hover{
+  background-color:rgb(249, 221, 224);
+  transition:0.6s;
+}
+.login-form input[type=text]:focus, .register-form input:focus{
+  outline:none;
+  background-color:white;
+}
+/*End of Login Styles*/
+
+/*Register Styles*/
+.register-form{
+  display:grid;
+  place-items:center;
+  justify-content:center;
+  padding:10px;
+}
+.register-form label{
+  display:table;
+  margin-right:5px;
+  align-content:left;
+}
+.register-form input{
+  display:table;
+  align-content:right;
+}
+  #email{
+    width:250px;
+  }
+[type="date"]::-webkit-inner-spin-button {
+  display: none;
+}
+[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
+/*End of Register Styles*/
