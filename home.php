@@ -59,6 +59,45 @@ session_start();
                 <td class="body-content">
                     <!--Main Content-->
 
+                    
+                    
+                    
+                    <div class ="home">
+                    
+                    <table>
+                        <tr>
+                        <td></td>
+                            <td><label id = "home-label">Best selling Artist</label></td>
+                        <td></td>
+                        </tr>
+                        <tr>
+                        <td><img src="images/TjapT-1.jpg" width="300px" height="300px"></td>
+                        <td><img src="images/TjapT-2.jpg" width="300px" height="300px"></td>
+                        <td><img src="images/TjapT-3.jpg" width="300px" height="300px"></td>
+                        </tr>
+                        <tr>
+                        <td></td>
+                            <td><label id = "home-label">Best selling Artist</label></td>
+                        <td></td>
+                        </tr>
+                        <tr>
+                        <td><img src="images/TjapT-1.jpg" width="300px" height="300px"></td>
+                        <td><img src="images/TjapT-1.jpg" width="300px" height="300px"></td>
+                        <td><img src="images/TjapT-1.jpg" width="300px" height="300px"></td>
+                        </tr>
+                    </table>
+                    
+                    </div>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                 </td>
                 <td class="body-spacing"></td>
             </tr>
