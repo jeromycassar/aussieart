@@ -331,26 +331,50 @@ body{
   place-items:center;
   justify-content:center;
   padding:10px;
-  grid-template-columns:200px 185px;
-  grid-template-rows:
-    auto
-    auto;
-  grid-template-areas:
-  "label input"
-  "div div";
 }
-  .label{
-    padding:20px;
-    grid-area:label;
-    text-align:right;
+.register-form label{
+  display:table;
+  margin-right:5px;
+  align-content:left;
+}
+.register-form input{
+  display:table;
+  align-content:right;
+}
+.register-form h3{
+  text-align:center;
+  margin-bottom:20px;
+}
+  #email{
+    width:250px;
   }
-  .input{
-    padding:20px;
-    grid-area:input;
-    text-align:left;
-  }
-  .submit-div{
-    grid-area:div;
-    padding:20px;
-  }
+[type="date"]::-webkit-inner-spin-button {
+  display: none;
+}
+[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
+#submit{
+  width:100px;
+  height:50px;
+}
+.register-btm{
+  display:grid;
+  place-items:center;
+}
 /*End of Register Styles*/
+
+/*Products Page Styles*/
+.products-table{
+  display:grid;
+  place-items:center;
+  text-align:center;
+  font-family:header;
+  color:rgb(175, 86, 92);
+  font-size:10pt;
+  font-weight:bold;
+}
+.product-table img{
+  cursor:pointer;
+}
+/*End of Products Page Style*/
