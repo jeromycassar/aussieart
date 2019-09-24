@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang='en'>
 <head> <!--Head-->
-  <title>aussieart</title>
+  <title>aussieart - Home</title>
   <meta charset="utf-8">
   <link rel="stylesheet" type="text/CSS" href="stylesheets/style.css">
 </head><!--End of head-->
@@ -19,20 +19,21 @@
       <nav class="nav-bar"><!--Navigation Bar-->
           <a href=''>home</a>
           <a href=''>products</a>
+          <a href=''>help</a>
         <div class="topnav-centered">
           <form id="search" method="POST">
             <input type="text" name="search" id="search-bar" placeholder="search">
           </form>
         </div>
         <div class="topnav-right">
-          <a class="cart-link" href=''>
-            <div class="cart-wrapper">
-              <span id="cart-num">0</span>
-              <img id="cart" src="images/shopping-cart.png" width="22px" height="22px">
-            </div>
-          </a>
-          <a href='' style="position:relative; bottom:2px;">login</a>
-        </div>
+            <a class="cart-link" href=''>
+              <div class="cart-wrapper">
+                <span id="cart-num">0</span>
+                <img id="cart" src="images/shopping-cart.png" width="22px" height="22px">
+              </div>
+            </a>
+            <a href='' style="position:relative; bottom:2px;">login</a>
+          </div>
       </nav><!--End of Navigation Bar-->
   </header><!--End of header-->
   <body><!--Content-->
@@ -40,22 +41,7 @@
           <tr>
               <td class="body-spacing"></td>
               <td class="body-content"><!--Main Content-->
-                <div class="prod-container">
-                  <div id="prod-left">
-                    <a href="products.html" class="btn">&#17; Back</a><br>
-                    <img style="margin-top:15px;" src="images\Products\Ann Thomson\2497_1_m.jpg" height="200px" width="200px">
-                    <p class="prod-price" name="price"></p><br>
-                    Artist: <br><span class="artist-name">Ann Thompson</span><br><br>
-                    Themes: <br><span class="prod-themes">warm, earthy, abstract</span>
-                  </div>
-                  <div id="prod-right">
-                    <p class="prod-name" name="name"><strong>Abstract Painting 1</strong></p><br>
-                    <p class="prod-desc">
-                      This art piece endures warm, earthy colours, perfect for hanging on bland walls. This art piece by Ann Thompson will bring color.
-                    </p><br><br>
-                    <button class="btn">Add to Cart</button>
-                  </div>
-                </div>
+                
               </td>
               <td class="body-spacing"></td>
           </tr>
