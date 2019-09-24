@@ -80,8 +80,12 @@ session_start();
                         <br>
                         <br>
                         <label id="home-label">Best selling Artist</label>
+
                         <label id="home-label"><strong>Thomas Tjapaltjarri</strong></label>
-                        <p id="home-label">Thomas Tjapaltjarri is an Australian Aboriginal artist. He and his brothers Warlimpirrnga and Walala have become well known as the Tjapaltjarri Brothers. Tjapaltjarri and his family became known as the last group of Aborigines to come into contact with modern, European society.</p>
+                        <Div class=home-des>
+                            <p id="home-label">Thomas Tjapaltjarri is an Australian Aboriginal artist. He and his brothers Warlimpirrnga and Walala have become well known as the Tjapaltjarri Brothers. Tjapaltjarri and his family became known as the last group of Aborigines to come into contact with modern, European society.</p>
+                        </Div>
+                        <br>
                         <table>
                             <tr>
                                 <td><img src="images/TjapT-2.jpg" width="200px" height="200px"></td>
