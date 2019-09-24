@@ -32,8 +32,7 @@ session_start();
         <nav class="nav-bar">
             <!--Navigation Bar-->
             <a href="home.php">home</a>
-            <a href="home.php">products</a>
-            <a href="home.php">help</a>
+            <a href="products.php">products</a>
             <div class="topnav-centered">
                 <form id="search" method="POST">
                     <input type="text" name="search" id="search-bar" placeholder="search">
@@ -46,7 +45,7 @@ session_start();
                         <img id="cart" src="images/shopping-cart.png" width="22px" height="22px">
                     </div>
                 </a>
-                <a href='login.php' style="position:relative; bottom:2px;">login</a>
+                <a href='login.php' style="position:relative; bottom:2px;">Log out</a>
             </div>
         </nav>
         <!--End of Navigation Bar-->
@@ -92,7 +91,6 @@ session_start();
                         <ul>
                             <li><a href="about.php">about us</a></li>
                             <li><a href="contact.php">contact us</a></li>
-                            <li><a href="product.php">Product</a></li>
                         </ul>
                     </td>
                     <td>
