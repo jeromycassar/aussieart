@@ -66,13 +66,13 @@ session_start();
                         <label id="home-label">Browse by theme</label>
                         <table>
                             <tr>
-                                <td><img src="images/TjapT-1.jpg" width="270px" height="270px"></td>
-                                <td><img src="images/TjapT-2.jpg" width="270px" height="270px"></td>
-                                <td><img src="images/ThomA-3.jpg" width="270px" height="270px"></td>
+                                <td><img src="images/TjapT-1.jpg" width="200px" height="200px"></td>
+                                <td><img src="images/morwA-1.jpg" width="200px" height="200px"></td>
+                                <td><img src="images/ThomA-3.jpg" width="200px" height="200px"></td>
                             </tr>
                             <tr>
                                 <td><label id="home-label">Culture</label></td>
-                                <td><label id="home-label">Pattern</label></td>
+                                <td><label id="home-label">Skulpture</label></td>
                                 <td><label id="home-label">Abstract</label></td>
                             </tr>
                         </table>
@@ -81,8 +81,8 @@ session_start();
                         <label id="home-label"><strong>Ann Thompson</strong></label>
                         <table>
                             <tr>
-                                <td><img src="images/ThomA-1.jpg" width="270px" height="270px"></td>
-                                <td><img src="images/ThomA-2.jpg" width="270px" height="270px"></td>
+                                <td><img src="images/ThomA-1.jpg" width="200px" height="270px"></td>
+                                <td><img src="images/ThomA-2.jpg" width="200px" height="270px"></td>
                                 <td><img src="images/ThomA-3.jpg" width="270px" height="270px"></td>
                             </tr>
                         </table>
