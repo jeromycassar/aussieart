@@ -371,6 +371,31 @@ body{
   text-align: center;
 }
 /*End of Home Styles*/
+
+/*Products Page Styles*/
+.products-table{
+  display:grid;
+  place-items:center;
+  text-align:center;
+  font-family:header;
+  color:rgb(175, 86, 92);
+  font-size:10pt;
+  font-weight:bold;
+}
+.product-table img{
+  cursor:pointer;
+}
+
+.product-size{
+     width:200px;
+    height:200px;
+}
+
+.product-item{
+  margin:20px;
+}
+/*End of Products Page Style*/
+
 /*About Us Page Styles*/
 h3{
   font-family:header;

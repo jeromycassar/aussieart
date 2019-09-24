@@ -120,8 +120,8 @@ session_start();
 		//insert this input (plus a newline) into the users.txt
         $new_content = $content . "\n" . $input;
 		file_put_contents("gs://aussie-users/users.txt",$new_content);
-        echo "<br>".$content."<br>";
-        echo "<br>".$new_content."<br>";
+        //echo "<br>".$content."<br>";
+        //echo "<br>".$new_content."<br>";
 	}
     }
 ?>

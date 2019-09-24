@@ -44,7 +44,7 @@ session_start();
 
                     <h2>Register</h2>
 
-                    <form class="register-form" name="register" method="POST" onsubmit="return validateform()" oninput="CheckPassword()">
+                    <form action="login.php" class="register-form" name="register" method="POST" onsubmit="return validateform()" oninput="CheckPassword()">
                   <table>
                     <tr><td><h4>Personal Information:</h4></td></tr>
                     <tr>
@@ -94,7 +94,6 @@ session_start();
                         }
 
                     </script>
-                    <i>Username and password required</i>
                 </td>
                 <td class="body-spacing"></td>
             </tr>

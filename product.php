@@ -50,37 +50,32 @@ session_start();
         </nav>
         <!--End of Navigation Bar-->
     </header>
-    <!--End of header-->
-
-    <body>
-        <!--Content-->
-        <table id="content-table">
-            <tr>
-                <td class="body-spacing"></td>
-                <td class="body-content">
-                    <!--Main Content-->
-                    <div class="prod-container">
-                        <div id="prod-left">
-                            <a href="" class="btn">&#17; Back</a><br>
-                            <img style="margin-top:15px;" src="" height="200px" width="200px">
-                            <p class="prod-price" name="price"></p><br>
-                            Artist: <br><span class="artist-name"></span><br><br>
-                            Themes: <br><span class="prod-themes"></span>
-                        </div>
-                        <div id="prod-right">
-                            <p class="prod-name" name="name"><strong></strong></p><br>
-                            <p class="prod-desc">
-
-                            </p><br><br>
-                            <button class="btn">Add to Cart</button>
-                        </div>
-                    </div>
-                </td>
-                <td class="body-spacing"></td>
-            </tr>
-        </table>
-    </body>
-    <!--End of Content-->
+    <body><!--Content-->
+      <table id="content-table">
+          <tr>
+              <td class="body-spacing"></td>
+              <td class="body-content"><!--Main Content-->
+                <div class="prod-container">
+                  <div id="prod-left">
+                    <a href="products.php" class="btn">&#17; Back</a><br>
+                    <img style="margin-top:15px;" src="images/ThomA-1.jpg" height="200px" width="200px">
+                    <p class="prod-price" name="price"></p><br>
+                    Artist: <br><span class="artist-name">Ann Thompson</span><br><br>
+                    Themes: <br><span class="prod-themes">warm, earthy, abstract</span>
+                  </div>
+                  <div id="prod-right">
+                    <p class="prod-name" name="name"><strong>Abstract Painting 1</strong></p><br>
+                    <p class="prod-desc">
+                      This art piece endures warm, earthy colours, perfect for hanging on bland walls. This art piece by Ann Thompson will bring color.
+                    </p><br><br>
+                    <button class="btn">Add to Cart</button>
+                  </div>
+                </div>
+              </td>
+              <td class="body-spacing"></td>
+          </tr>
+      </table>
+  </body><!--End of Content-->
     <footer>
         <!--Footer-->
         <nav class="footer-bar">
