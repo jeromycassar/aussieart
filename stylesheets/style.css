@@ -377,6 +377,9 @@ body{
 .product-table img{
   cursor:pointer;
 }
+.product-item{
+  margin:20px;
+}
 /*End of Products Page Style*/
 
 /*About Us Page Styles*/
