@@ -305,21 +305,21 @@ body{
 
 .body-content h2{text-align:center;}
 
-.login-form, .body-content h2, .register-form{
+.login-form, .body-content h2, .register-form, .contact-us-form{
   font-family:header;
   color:rgb(175, 86, 92);
 }
-.login-form input[type=text], .register-form input{
+.login-form input[type=text], .register-form input, .contact-us-form input, .contact-us-form textarea{
   border:1px solid rgb(175, 86, 92);
   padding:3px 5px;
   border-radius:5px;
   transition:0.6s;
 }
-.login-form input[type=text]:hover, .register-form input:hover{
+.login-form input[type=text]:hover, .register-form input:hover, .contact-us-form input:hover, .contact-us-form textarea:hover{
   background-color:rgb(249, 221, 224);
   transition:0.6s;
 }
-.login-form input[type=text]:focus, .register-form input:focus{
+.login-form input[type=text]:focus, .register-form input:focus, .contact-us-form input:focus, .contact-us-form textarea:focus{
   outline:none;
   background-color:white;
 }
@@ -416,6 +416,7 @@ p, .italic{
   display:grid;
   place-items:center;
 }
+
 .contact-us-form .btn{
   width:120px;
 }
