@@ -67,7 +67,7 @@ session_start();
                                         <tr>
                                             <td>
                                                 <form method="get" action="product.php">
-                                                    <input type="image" class="product-size" src="images/ThomA-1.jpg" />
+                                                    <input type="image" src="images/ThomA-1.jpg" id="product-size"/>
                                                 </form>
                                             </td>
                                         </tr>
@@ -82,7 +82,7 @@ session_start();
                             <td>
                                 <table class="product-item">
                                     <tr>
-                                        <td><img src="images/ThomA-2.jpg" width="200px" height="200px"></td>
+                                        <td><img src="images/ThomA-2.jpg"id="product-size"></td>
                                     </tr>
                                     <tr>
                                         <td>Abstract Painting 2</td>
@@ -95,7 +95,7 @@ session_start();
                             <td>
                                 <table class="product-item">
                                     <tr>
-                                        <td><img src="images/ThomA-3.jpg" width="200px" height="200px"></td>
+                                        <td><img src="images/ThomA-3.jpg" id="product-size"></td>
                                     </tr>
                                     <tr>
                                         <td>Abstract Painting 3</td>
@@ -108,7 +108,7 @@ session_start();
                             <td>
                                 <table class="product-item">
                                     <tr>
-                                        <td><img src="images/TjapT-1.jpg" width="200px" height="200px"></td>
+                                        <td><img src="images/TjapT-1.jpg" id="product-size"></td>
                                     </tr>
                                     <tr>
                                         <td>Indigenous Painting 1</td>
@@ -123,7 +123,7 @@ session_start();
                             <td>
                                 <table class="product-item">
                                     <tr>
-                                        <td><img src="images/TjapT-2.jpg" width="200px" height="200px"></td>
+                                        <td><img src="images/TjapT-2.jpg" id="product-size"></td>
                                     </tr>
                                     <tr>
                                         <td>Indigenous Painting 2</td>

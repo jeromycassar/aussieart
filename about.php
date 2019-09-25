@@ -64,7 +64,22 @@ session_start();
                   We believe that geographical distance shouldn't limit awareness or accessibility and that all aussie artists should get 'a fair dinkum go' at selling their art.
                   With this ethos in mind we created 'aussieart', an E-Commerce platform where Australian artists can connect and sell their work direct to the international consumers
                   without the dodgy commission fees charged by art dealers and galleries.
-                </p>
+                </p><br>
+                <h3>What we offer to customers</h3><br>
+                <p>
+                  <ul>
+                  <li class="dot-point">
+                    <span>Connection</span><br>Customers can purchase direct from the artist which provides a more meaningful connection and value to the art piece purchased
+                  </li>
+                  <br>
+                  <li class="dot-point">
+                    <span>Experience</span><br>Customers can have the gallery experience when browsing work by reading the artists own description of their piece
+                  </li>
+                  <br>
+                  <li class="dot-point">
+                    <span>Transparency</span><br>There aren’t any secret fees that will be charged as typically would when purchasing from a gallery or art dealer
+                  </li>
+                  </ul>
               </td>
               <td class="body-spacing"></td>
           </tr>

@@ -433,13 +433,25 @@ body {
 #home-label {
     font-family: header;
     color: rgb(175, 86, 92);
+    text-align:center;
+}
+
+#home-Title {
+    font-family: header;
+    color: rgb(175, 86, 92);
+    font-size: 16pt;
+    text-align:center;
 }
 
 .home-table {
-    display: grid;
-    place-items: center;
+    display:grid;
+  place-items:center;
+  text-align:center;
+  font-family:header;
+  color:rgb(175, 86, 92);
+  font-size:10pt;
+  font-weight:bold;
     justify-content: center;
-    padding: 10px;
 }
 
 .home-table label {
@@ -458,48 +470,60 @@ body {
 /*End of Home Styles*/
 
 /*Products Page Styles*/
-.products-table {
-    display: grid;
-    place-items: center;
-    text-align: center;
-    font-family: header;
-    color: rgb(175, 86, 92);
-    font-size: 10pt;
-    font-weight: bold;
+.products-table{
+  display:grid;
+  place-items:center;
+  text-align:center;
+  font-family:header;
+  color:rgb(175, 86, 92);
+  font-size:10pt;
+  font-weight:bold;
+}
+.products-table img{
+  cursor:pointer;
+}
+.products-table a{
+  text-decoration:none;
+  color:rgb(175, 86, 92);
+}
+.product-item{
+  margin:20px;
+  z-index:-1;
+  transition-duration:0.25s;
+}
+.product-item:hover{
+  box-shadow:0px 0px 15px -2px rgba(0,0,0,0.7);
+  transition-duration:0.25s;
 }
 
-.product-table img {
-    cursor: pointer;
-}
-
-.product-size {
+#product-size{
     width: 200px;
     height: 200px;
 }
-
-.product-item {
-    margin: 20px;
-}
-
 /*End of Products Page Style*/
 
 /*About Us Page Styles*/
-h3 {
-    font-family: header;
-    font-weight: bold;
-    color: rgb(175, 86, 92);
-    text-align: center;
+h3{
+  font-family:header;
+  font-weight:bold;
+  color:rgb(175, 86, 92);
+  text-align:center;
 }
-
-.italic {
-    font-style: italic;
+.italic{
+  font-style:italic;
 }
-
-p,
-.italic {
-    font-family: header;
+p, .italic, .dot-point{
+  font-family:header;
 }
-
+.dot-point{
+  text-align:left;
+  margin-left:20px;
+}
+.dot-point span{
+  color:rgb(175, 86, 92);
+  font-weight:bold;
+  font-size:12pt;
+}
 /*End of About Us Page Styles*/
 
 /*Contact Us Page Styles*/
