@@ -261,8 +261,7 @@ session_start();
             </tr>
         </table>
     </body>
-    <!--End of Content-->
-    <!--End of Content-->
+   <!--End of Content-->
     <footer>
         <!--Footer-->
         <nav class="footer-bar">
@@ -277,10 +276,13 @@ session_start();
                     </td>
                     <td>
                         <ul class="middle">
-                        </ul>
+                        </ul> 
                     </td>
                     <td>
-                        <ul class="right">
+                        <ul>
+                            <li><a id="right" href="http://www.facebook.com"><img  src="images/faceb.png" width="35px" height="35px"></a></li>
+                            <li><a id="right" href="http://www.twitter.com"><img  src="images/twit.png" width="35px" height="35px"></a></li>
+                            <li><a id="right" href="http://www.instagram.com"><img  src="images/insta.png" width="35px" height="35px"></a></li>
                         </ul>
                     </td>
                 </tr>

@@ -82,6 +82,7 @@ footer {
     text-align: right;
     float: right;
     padding-right: 5px;
+    color: white;
 }
 
 td {
@@ -263,10 +264,15 @@ body {
     float: left;
     color: #f2f2f2;
     text-align: center;
-    padding: 14px 16px;
+    padding: 10px;
     text-decoration: none;
     transition-duration: 0.8s;
     margin-right: 10px;
+}
+
+#right{
+    float: right;
+    padding: 10px;
 }
 
 .footer-bar li {
@@ -276,6 +282,10 @@ body {
 .footer-bar li a:hover {
     transition-duration: 0.8s;
     background-color: rgb(117, 54, 58);
+}
+
+#right{
+    float: right;
 }
 
 /*End of Footer Layout*/
@@ -511,11 +521,19 @@ h3{
 }
 .italic{
   font-style:italic;
+    font-family:header;
+  color:rgb(175, 86, 92);
 }
 p, .italic, .dot-point{
   font-family:header;
   color:rgb(175, 86, 92);
 }
+
+#fontcolour{
+  font-family:header;
+  color:rgb(175, 86, 92);
+}
+
 .dot-point{
   text-align:left;
   margin-left:20px;

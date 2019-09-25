@@ -60,8 +60,8 @@ session_start();
                     <a href="products.php" class="btn">&#17; Back</a><br>
                     <img style="margin-top:15px;" src="images/ThomA-1.jpg" height="200px" width="200px">
                     <p class="prod-price" name="price"></p><br>
-                    Artist: <br><span class="artist-name">Ann Thompson</span><br><br>
-                    Themes: <br><span class="prod-themes">warm, earthy, abstract</span>
+                    <p class="prod-desc">Artist: </p><br><span class="artist-name">Ann Thompson</span><br><br>
+                    <p class="prod-desc">Themes: </p><br><span class="prod-themes">warm, earthy, abstract</span>
                   </div>
                   <div id="prod-right">
                     <p class="prod-name" name="name"><strong>Abstract Painting 1</strong></p><br>
@@ -76,6 +76,7 @@ session_start();
           </tr>
       </table>
   </body><!--End of Content-->
+   <!--End of Content-->
     <footer>
         <!--Footer-->
         <nav class="footer-bar">
@@ -90,10 +91,13 @@ session_start();
                     </td>
                     <td>
                         <ul class="middle">
-                        </ul>
+                        </ul> 
                     </td>
                     <td>
-                        <ul class="right">
+                        <ul>
+                            <li><a id="right" href="http://www.facebook.com"><img  src="images/faceb.png" width="35px" height="35px"></a></li>
+                            <li><a id="right" href="http://www.twitter.com"><img  src="images/twit.png" width="35px" height="35px"></a></li>
+                            <li><a id="right" href="http://www.instagram.com"><img  src="images/insta.png" width="35px" height="35px"></a></li>
                         </ul>
                     </td>
                 </tr>
