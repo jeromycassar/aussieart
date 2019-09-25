@@ -4,6 +4,9 @@
   src:url(../fonts/comfortaa.ttf);
 }
 /*End of Fonts*/
+/*Scroll Bar Styles*/
+
+/*End of Scrollbar Styles*/
 /*Website Layout*/
 *{
     margin:0;
@@ -83,6 +86,7 @@ footer{
     position:relative;
     overflow:hidden;
     background-color:rgb(194, 115, 120);
+    z-index:2;
 }
 /*Navigation Bar Styles*/
 .nav-bar a{
@@ -374,11 +378,22 @@ body{
   font-size:10pt;
   font-weight:bold;
 }
-.product-table img{
+.products-table img{
   cursor:pointer;
+}
+.products-table a{
+  text-decoration:none;
+  color:rgb(175, 86, 92);
 }
 .product-item{
   margin:20px;
+  z-index:-1;
+  transition-duration:0.25s;
+}
+.product-item:hover{
+  transform: scale(1.08);
+  box-shadow:0px 0px 15px -2px rgba(0,0,0,0.7);
+  transition-duration:0.25s;
 }
 /*End of Products Page Style*/
 
@@ -392,8 +407,17 @@ h3{
 .italic{
   font-style:italic;
 }
-p, .italic{
+p, .italic, .dot-point{
   font-family:header;
+}
+.dot-point{
+  text-align:left;
+  margin-left:20px;
+}
+.dot-point span{
+  color:rgb(175, 86, 92);
+  font-weight:bold;
+  font-size:12pt;
 }
 /*End of About Us Page Styles*/
 
