@@ -57,7 +57,7 @@ session_start();
               <td class="body-content"><!--Main Content-->
                 <div class="prod-container">
                   <div id="prod-left">
-                    <a href="products.php" class="btn">&#17; Back</a><br>
+                    <a href="products.php" class="btn">Back</a><br>
                     <img style="margin-top:15px;" src="images/ThomA-1.jpg" height="200px" width="200px">
                     <p class="prod-price" name="price"></p><br>
                     <p id="product-font">Artist: </p><br><span class="artist-name">Ann Thompson</span><br><br>
