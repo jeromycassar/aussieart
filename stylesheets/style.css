@@ -327,7 +327,8 @@ body {
 .prod-themes,
 .artist-name {
     font-size: 8pt;
-    color: black;
+    font-family: header;
+    color: black
 }
 
 /*End of Individual Product Styles*/

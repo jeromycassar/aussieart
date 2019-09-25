@@ -60,8 +60,8 @@ session_start();
                     <a href="products.php" class="btn">&#17; Back</a><br>
                     <img style="margin-top:15px;" src="images/ThomA-1.jpg" height="200px" width="200px">
                     <p class="prod-price" name="price"></p><br>
-                    <p class="prod-desc">Artist: </p><br><span class="artist-name">Ann Thompson</span><br><br>
-                    <p class="prod-desc">Themes: </p><br><span class="prod-themes">warm, earthy, abstract</span>
+                    <p id="product-font">Artist: </p><br><span class="artist-name">Ann Thompson</span><br><br>
+                    <p id="product-font">Themes: </p><br><span class="prod-themes">warm, earthy, abstract</span>
                   </div>
                   <div id="prod-right">
                     <p class="prod-name" name="name"><strong>Abstract Painting 1</strong></p><br>
