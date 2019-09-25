@@ -514,6 +514,7 @@ h3{
 }
 p, .italic, .dot-point{
   font-family:header;
+  color:rgb(175, 86, 92);
 }
 .dot-point{
   text-align:left;
