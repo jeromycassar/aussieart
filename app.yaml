@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 runtime: php55
 api_version: 1
 
@@ -40,4 +41,48 @@ handlers:
   
 - url: /.*
   script: login.php
+=======
+runtime: php55
+api_version: 1
+
+handlers:
+- url: /stylesheets
+  static_dir: stylesheets
+  
+- url: /images
+  static_dir: images
+  
+- url: /cart.php
+  script: cart.php
+  
+- url: /checkout.php
+  script: checkout.php
+  
+- url: /home.php
+  script: home.php
+  
+- url: /products.php
+  script: products.php
+  
+- url: /product.php
+  script: product.php
+  
+- url: /purchaseHistory.php
+  script: purchaseHistory.php
+
+- url: /receipt.php
+  script: receipt.php
+
+- url: /register.php
+  script: register.php
+  
+- url: /about.php
+  script: about.php
+  
+- url: /contact.php
+  script: contact.php
+  
+- url: /.*
+  script: login.php
+>>>>>>> 19562a07718a265d15f6d7b9d18897a7ab6d052b
   
