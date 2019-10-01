@@ -32,8 +32,7 @@ session_start();
         <nav class="nav-bar">
             <!--Navigation Bar-->
             <a href="home.php">home</a>
-            <a href="home.php">products</a>
-            <a href="home.php">help</a>
+            <a href="products.php">products</a>
             <div class="topnav-centered">
                 <form id="search" method="POST">
                     <input type="text" name="search" id="search-bar" placeholder="search">
@@ -46,42 +45,38 @@ session_start();
                         <img id="cart" src="images/shopping-cart.png" width="22px" height="22px">
                     </div>
                 </a>
-                <a href='login.php' style="position:relative; bottom:2px;">login</a>
+                <a href='login.php' style="position:relative; bottom:2px;">Log out</a>
             </div>
         </nav>
         <!--End of Navigation Bar-->
     </header>
-    <!--End of header-->
-
-    <body>
-        <!--Content-->
-        <table id="content-table">
-            <tr>
-                <td class="body-spacing"></td>
-                <td class="body-content">
-                    <!--Main Content-->
-                    <div class="prod-container">
-                        <div id="prod-left">
-                            <a href="" class="btn">&#17; Back</a><br>
-                            <img style="margin-top:15px;" src="" height="200px" width="200px">
-                            <p class="prod-price" name="price"></p><br>
-                            Artist: <br><span class="artist-name"></span><br><br>
-                            Themes: <br><span class="prod-themes"></span>
-                        </div>
-                        <div id="prod-right">
-                            <p class="prod-name" name="name"><strong></strong></p><br>
-                            <p class="prod-desc">
-
-                            </p><br><br>
-                            <button class="btn">Add to Cart</button>
-                        </div>
-                    </div>
-                </td>
-                <td class="body-spacing"></td>
-            </tr>
-        </table>
-    </body>
-    <!--End of Content-->
+    <body><!--Content-->
+      <table id="content-table">
+          <tr>
+              <td class="body-spacing"></td>
+              <td class="body-content"><!--Main Content-->
+                <div class="prod-container">
+                  <div id="prod-left">
+                    <a href="products.php" class="btn">Back</a><br>
+                    <img style="margin-top:15px;" src="images/ThomA-1.jpg" height="200px" width="200px">
+                    <p class="prod-price" name="price"></p><br>
+                    <p id="product-font">Artist: </p><br><span class="artist-name">Ann Thompson</span><br><br>
+                    <p id="product-font">Themes: </p><br><span class="prod-themes">warm, earthy, abstract</span>
+                  </div>
+                  <div id="prod-right">
+                    <p class="prod-name" name="name"><strong>Abstract Painting 1</strong></p><br>
+                    <p class="prod-desc">
+                      This art piece endures warm, earthy colours, perfect for hanging on bland walls. This art piece by Ann Thompson will bring color.
+                    </p><br><br>
+                    <button class="btn">Add to Cart</button>
+                  </div>
+                </div>
+              </td>
+              <td class="body-spacing"></td>
+          </tr>
+      </table>
+  </body><!--End of Content-->
+   <!--End of Content-->
     <footer>
         <!--Footer-->
         <nav class="footer-bar">
@@ -92,15 +87,17 @@ session_start();
                         <ul>
                             <li><a href="about.php">about us</a></li>
                             <li><a href="contact.php">contact us</a></li>
-                            <li><a href="product.php">Product</a></li>
                         </ul>
                     </td>
                     <td>
                         <ul class="middle">
-                        </ul>
+                        </ul> 
                     </td>
                     <td>
-                        <ul class="right">
+                        <ul>
+                            <li><a id="right" href="http://www.facebook.com"><img  src="images/faceb.png" width="35px" height="35px"></a></li>
+                            <li><a id="right" href="http://www.twitter.com"><img  src="images/twit.png" width="35px" height="35px"></a></li>
+                            <li><a id="right" href="http://www.instagram.com"><img  src="images/insta.png" width="35px" height="35px"></a></li>
                         </ul>
                     </td>
                 </tr>

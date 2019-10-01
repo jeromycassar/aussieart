@@ -44,13 +44,35 @@ session_start();
 
                     <h2>Register</h2>
 
-                    <form action="login.php" name="register" method="POST" onsubmit="return validateform()" oninput="CheckPassword()">
-                        Username: <input type="text" name="username" id="username">
-                        <br /><br />
-                        Password: <input type="text" name="password" id="password">
-                        <br /><br />
-                        <button class="btn" id="submit" type="submit" onclick="IsEmpty()" disabled>Register</button>
-                    </form>
+                    <form action="login.php" class="register-form" name="register" method="POST" onsubmit="return validateform()" oninput="CheckPassword()">
+                  <table>
+                    <tr><td><h4>Personal Information:</h4></td></tr>
+                    <tr>
+                      <td>
+                        <label for="firstname">First Name</label>
+                        <input type="text" name="firstname" id="firstname" required><br>
+                        <label for="lastname">Family Name</label>
+                        <input type="text" name="lastname" id="lastname" required><br>
+                        <label for="DOB">Date of Birth</label>
+                        <input type="date" name="DOB" id="DOB" required>
+                      </td>
+                    </tr>
+                    <tr><td><h4>Account Information:</h4></td></tr>
+                    <tr>
+                      <td>
+                        <label for="username">Username</label>
+                        <input type="username" name="username" id="username"><br>
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" required><br>
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password" required>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><button class="btn" id="submit" type="submit">Register</button> <a href="login.php">Back</a></td>
+                    </tr>
+                </table>
+                </form>
                     <script type="text/jscript">
                         function CheckPassword() {
                             password = document.getElementById('password').value;
@@ -72,7 +94,6 @@ session_start();
                         }
 
                     </script>
-                    <i>Username and password required</i>
                 </td>
                 <td class="body-spacing"></td>
             </tr>
