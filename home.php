@@ -73,7 +73,7 @@ session_start();
                             </tr>
                             <tr>
                                 <td>Cultural</td>
-                                <td>Skulptures</td>
+                                <td>Sculptures</td>
                                 <td>Abstract</td>
                             </tr>
                         </table>

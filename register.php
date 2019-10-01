@@ -69,7 +69,7 @@ session_start();
                       </td>
                     </tr>
                     <tr>
-                      <td><button class="btn" id="submit" type="submit">Register</button></td>
+                      <td><button class="btn" id="submit" type="submit">Register</button> <a href="login.php">Back</a></td>
                     </tr>
                 </table>
                 </form>
