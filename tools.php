@@ -113,4 +113,13 @@ function currentStyleNavLink($css) {
   $filename = $bits[count($bits)-1];
   echo "<style>nav a[href$='$filename'] { $css }</style>";
 }
+
+function preShow( $arr, $returnAsString=false ) {
+  $ret  = '<pre>' . print_r($arr, true) . '</pre>';
+  if ($returnAsString)
+    return $ret;
+  else 
+    echo $ret; 
+}
+
 ?>

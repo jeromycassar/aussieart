@@ -33,63 +33,72 @@ loadTop('aussieart - Product', 'test'); //title will change based on product sel
 
     </script>
     <?php
-    if(isset( $_POST['usernamel'])){
-    $input = $_POST['usernamel']. ",". $_POST['passwordl'];
-    $_SESSION["usernamel"] = $_POST['usernamel'];
-	list($username, $password) = explode(",",$input);
-    if (isset($_POST['usernamel'])){
+    $user = array(
+        "username" => $_POST['username'],
+        "password" => $_POST['password'],
+        "firstname" => $_POST['firstname'],
+        "lastname" => $_POST['lastname'],
+        "DOB" => $_POST['DOB'],
+        "email" => $_POST['email']);
+            
+    if(isset( $_POST['username'])){
+    $_SESSION["username"] = $_POST['username'];
+    if (isset($_POST['username'])){
 	$exist = 0;
            //read the file line by line
-          $file = fopen("gs://aussie-users/users.txt","r");
-           while(!feof($file))  {
+          $file = fopen("users.txt","r");
+          while(!feof($file))  {
+                 // get a line without the last “newline” character
                 $line = trim(fgets($file));
-               if($line == $_POST['usernamel']. ",". $_POST['passwordl']){
-                  $exist = 1;
-                       break;
-               } 
-           }
-             fclose($file);	 
+                //compare the content of the input and the line
+               
+			//$exist = 1;
+			break;
+	     		
+              }
+             fclose($file);		 
         //check if the input exist
     if ($exist == 1){
          echo "<script>location.href='home.php';</script>";
     }
     }
-    
-	//Receive input from clint side
-	$input = $_POST['username'] ."," .$_POST['password'];
-    //break the string based on a separator "," as two parts $a and $b
-    list($username, $password) = explode(",",$input);
-    if (!empty($_POST['username'])){
+}
+         
+    if (!empty($user['username'])){
             //read the file line by line
-            $file = fopen("gs://aussie-users/users.txt","r");
+            $file = fopen("users.txt","r");
             //check if the input exist
+        //read from users.txt
+        
             $exist = 0;
     
            while(!feof($file))  {
                  // get a line without the last “newline” character
                 $line = trim(fgets($file));
                 //compare the content of the input and the line
-               if($line == $username .",". $password){
+               if($line == $_POST['username']){
 			$exist = 1;
 			break;
 	     }		
               }
-             fclose($file);	
-    
+             fclose($file);
     
     if($exist == 1){
-		
+		echo "<br>"."SOMETHING HAPPENEED"."<br>";
 	}else{
-		//open a file named "users.txt"
-		$content = file_get_contents("gs://aussie-users/users.txt");
-		//insert this input (plus a newline) into the users.txt
-        $new_content = $content . "\n" . $input;
-		file_put_contents("gs://aussie-users/users.txt",$new_content);
-        //echo "<br>".$content."<br>";
-        //echo "<br>".$new_content."<br>";
-	}
+        $content = serialize($user);
+        file_put_contents("users.txt", $content . "<!-- explode -->", FILE_APPEND);
+        $string_data = file_get_contents("users.txt");
+        $explode = explode("<!-- explode -->", $string_data);
+        $count = count($explode);
+        for($i = 0; $i < $count; $i++){
+            $array = unserialize($explode[$i]);
+            if ($array){
+                 preshow($array);
+            }
+        }
     }
-    }
+    }  
 ?>
 </td>
 <?php
