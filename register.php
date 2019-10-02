@@ -8,7 +8,11 @@ session_start();
     <!--Head: JS/Fonts/CSS-->
     <title>aussieart - Home</title>
     <meta charset="utf-8">
+<<<<<<< HEAD
     <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+=======
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+>>>>>>> jeromy-branch
 </head>
 <!--End of head-->
 <div class="wrapper">
@@ -28,7 +32,11 @@ session_start();
             </table>
         </div>
         <nav class="nav-bar">
+<<<<<<< HEAD
            
+=======
+
+>>>>>>> jeromy-branch
         </nav>
         <!--End of Navigation Bar-->
     </header>
@@ -69,7 +77,11 @@ session_start();
                       </td>
                     </tr>
                     <tr>
+<<<<<<< HEAD
                       <td><button class="btn" id="submit" type="submit">Register</button> <a href="login.php">Back</a></td>
+=======
+                      <td><button class="btn" id="submit" type="submit">Register</button></td>
+>>>>>>> jeromy-branch
                     </tr>
                 </table>
                 </form>
@@ -94,6 +106,10 @@ session_start();
                         }
 
                     </script>
+<<<<<<< HEAD
+=======
+                    <i>Username and password required</i>
+>>>>>>> jeromy-branch
                 </td>
                 <td class="body-spacing"></td>
             </tr>
@@ -104,7 +120,11 @@ session_start();
         <nav class="footer-bar">
             <!--Footer Navigation Bar-->
             <table id="header-table">
+<<<<<<< HEAD
                
+=======
+
+>>>>>>> jeromy-branch
             </table>
         </nav>
         <!--End of Footer Navigation Bar-->

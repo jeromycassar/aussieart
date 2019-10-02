@@ -1,5 +1,6 @@
 <?php
 session_start();
+<<<<<<< HEAD
 ?>
 <!DOCTYPE html>
 <html lang='en'>
@@ -60,6 +61,14 @@ session_start();
                 <td class="body-content">
                     <!--Main Content-->
                     <h2>Artworks</h2><br>
+=======
+include_once('tools.php');
+loadTop('aussieart - Catalogue', 'test');
+currentStyleNavLink('background-color:rgb(117, 54, 58)');
+?>
+  <td class="body-content"><!--Main Content-->
+    <h2>Artworks</h2><br>
+>>>>>>> jeromy-branch
                     <table class="products-table">
                         <tr>
                             <td>
@@ -256,6 +265,7 @@ session_start();
                             </td>
                         </tr>
                     </table>
+<<<<<<< HEAD
                 </td>
                 <td class="body-spacing"></td>
             </tr>
@@ -296,3 +306,9 @@ session_start();
 
 </html>
 <!--End of html-->
+=======
+  </td>
+<?php
+loadBottom();
+?>
+>>>>>>> jeromy-branch

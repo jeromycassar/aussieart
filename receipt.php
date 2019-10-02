@@ -1,5 +1,6 @@
 <?php
 session_start();
+<<<<<<< HEAD
 ?>
 <!DOCTYPE html>
 <html lang='en'>
@@ -100,3 +101,14 @@ session_start();
 
 </html>
 <!--End of html-->
+=======
+include_once('tools.php');
+loadTop('aussieart - Your Receipt', 'test');
+?>
+  <td class="body-content"><!--Main Content-->
+
+  </td>
+<?php
+loadBottom();
+?>
+>>>>>>> jeromy-branch

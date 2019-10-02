@@ -8,7 +8,11 @@ session_start();
     <!--Head: JS/Fonts/CSS-->
     <title>aussieart - Home</title>
     <meta charset="utf-8">
+<<<<<<< HEAD
     <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+=======
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+>>>>>>> jeromy-branch
 </head>
 <!--End of head-->
 <div class="wrapper">
@@ -42,6 +46,7 @@ session_start();
                 <td class="body-content">
                     <!--Main Content-->
                     <h2>Login</h2>
+<<<<<<< HEAD
                     <br>
                     <form class="login-form" name="login" action="" method="POST" onsubmit="return validateform()">
                         <label for="username1">Username</label>
@@ -52,6 +57,16 @@ session_start();
                         <br />
                         <p>Don't have an account? <a href="register.php">Register</a></p><br>
                         <button class="btn" id="submit" type="submit">Login</button>
+=======
+
+                    <form name="login" method="POST" onsubmit="return validateform()">
+                        Username: <input type="text" name="usernamel" id="usernamel">
+                        <br /><br />
+                        Password: <input type="text" name="passwordl" id="passwordl">
+                        <br /><br />
+                        <button class="btn" id="submit" type="submit">Login</button>
+                        <a href="register.php">Register</a>
+>>>>>>> jeromy-branch
                     </form>
                     <script>
                         function validateform() {
@@ -69,11 +84,20 @@ session_start();
 
                     </script>
                     <?php
+<<<<<<< HEAD
      $input = $_POST['usernamel']. ",". $_POST['passwordl'];
     $_SESSION["usernamel"] = $_POST['usernamel'];
 	list($username, $password) = explode(",",$input);
     if (isset($_POST['usernamel'])){
 	$exist = 0;
+=======
+    if(isset($_POST)){
+      $input = $_POST['usernamel']. ",". $_POST['passwordl'];
+      $_SESSION["usernamel"] = $_POST['usernamel'];
+	     list($username, $password) = explode(",",$input);
+       if (isset($_POST['usernamel'])){
+	        $exist = 0;
+>>>>>>> jeromy-branch
            //read the file line by line
           $file = fopen("gs://aussie-users/users.txt","r");
            while(!feof($file))  {
@@ -81,15 +105,25 @@ session_start();
                if($line == $_POST['usernamel']. ",". $_POST['passwordl']){
                   $exist = 1;
                        break;
+<<<<<<< HEAD
                } 
            }
              fclose($file);	 
+=======
+               }
+           }
+             fclose($file);
+>>>>>>> jeromy-branch
         //check if the input exist
     if ($exist == 1){
          echo "<script>location.href='home.php';</script>";
     }
     }
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> jeromy-branch
 	//Receive input from clint side
 	$input = $_POST['username'] ."," .$_POST['password'];
     //break the string based on a separator "," as two parts $a and $b
@@ -99,7 +133,11 @@ session_start();
             $file = fopen("gs://aussie-users/users.txt","r");
             //check if the input exist
             $exist = 0;
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> jeromy-branch
            while(!feof($file))  {
                  // get a line without the last “newline” character
                 $line = trim(fgets($file));
@@ -107,6 +145,7 @@ session_start();
                if($line == $username .",". $password){
 			$exist = 1;
 			break;
+<<<<<<< HEAD
 	     }		
               }
              fclose($file);	
@@ -114,16 +153,33 @@ session_start();
     
     if($exist == 1){
 		
+=======
+	     }
+              }
+             fclose($file);
+
+
+    if($exist == 1){
+
+>>>>>>> jeromy-branch
 	}else{
 		//open a file named "users.txt"
 		$content = file_get_contents("gs://aussie-users/users.txt");
 		//insert this input (plus a newline) into the users.txt
         $new_content = $content . "\n" . $input;
 		file_put_contents("gs://aussie-users/users.txt",$new_content);
+<<<<<<< HEAD
         //echo "<br>".$content."<br>";
         //echo "<br>".$new_content."<br>";
 	}
     }
+=======
+        echo "<br>".$content."<br>";
+        echo "<br>".$new_content."<br>";
+	}
+    }
+}
+>>>>>>> jeromy-branch
 ?>
                 </td>
                 <td class="body-spacing"></td>

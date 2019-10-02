@@ -1,5 +1,6 @@
 <?php
 session_start();
+<<<<<<< HEAD
 ?>
 <!DOCTYPE html>
 <html lang='en'>
@@ -61,6 +62,14 @@ session_start();
                     <!--Main Content-->
 
                     <div class="home-table">
+=======
+include_once('tools.php');
+loadTop('aussieart - Home', 'test');
+currentStyleNavLink('background-color:rgb(117, 54, 58)');
+?>
+  <td class="body-content"><!--Main Content-->
+    <div class="home-table">
+>>>>>>> jeromy-branch
                         <label id="home-Title"><strong>Mission Statement</strong></label>
                         <label id="home-label"><i>"To provide high-quality artworks presented by official artists. We as a company will provide easy shipment and deliveries, catering for all around Australia and internationally.'"</i></label>
                         <br>
@@ -73,7 +82,11 @@ session_start();
                             </tr>
                             <tr>
                                 <td>Cultural</td>
+<<<<<<< HEAD
                                 <td>Sculptures</td>
+=======
+                                <td>Skulptures</td>
+>>>>>>> jeromy-branch
                                 <td>Abstract</td>
                             </tr>
                         </table>
@@ -83,9 +96,15 @@ session_start();
 
                         <label id="home-label"><strong>Thomas Tjapaltjarri</strong></label>
                         <br>
+<<<<<<< HEAD
                         <Div class=home-des>
                             <p id="home-label">Thomas Tjapaltjarri is an Australian Aboriginal artist. He and his brothers Warlimpirrnga and Walala have become well known as the Tjapaltjarri Brothers. Tjapaltjarri and his family became known as the last group of Aborigines to come into contact with modern, European society.</p>
                         </Div>
+=======
+                        <div class="home-des">
+                            <p id="home-label">Thomas Tjapaltjarri is an Australian Aboriginal artist. He and his brothers Warlimpirrnga and Walala have become well known as the Tjapaltjarri Brothers. Tjapaltjarri and his family became known as the last group of Aborigines to come into contact with modern, European society.</p>
+                        </div>
+>>>>>>> jeromy-branch
                         <br>
                         <table>
                             <tr>
@@ -95,6 +114,7 @@ session_start();
                             </tr>
                         </table>
                     </div>
+<<<<<<< HEAD
                 </td>
                 <td class="body-spacing"></td>
             </tr>
@@ -135,3 +155,9 @@ session_start();
 
 </html>
 <!--End of html-->
+=======
+  </td>
+<?php
+loadBottom();
+?>
+>>>>>>> jeromy-branch
