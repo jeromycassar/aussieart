@@ -381,6 +381,7 @@ body {
 }
 
 .login-form input[type=text],
+.login-form input,
 .register-form input,
 .contact-us-form input,
 .contact-us-form textarea {

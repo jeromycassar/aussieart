@@ -12,7 +12,7 @@ loadTop('aussieart - Product', 'test'); //title will change based on product sel
         <input type="text" name="usernamel" id="usernamel" class="input-login" required>
         <br />
         <label for="password1">Password</label>
-        <input type="text" name="passwordl" id="passwordl" class="input-login" required>
+        <input type="password" name="passwordl" id="passwordl" class="input-login" required>
         <br />
         <p>Don't have an account? <a href="register.php">Register</a></p><br>
         <button class="btn" id="submit" type="submit">Login</button>
@@ -33,6 +33,8 @@ loadTop('aussieart - Product', 'test'); //title will change based on product sel
 
     </script>
     <?php
+    //CREATING ARRAY------------------------------
+    if(!empty($_POST['username'])){
     $user = array(
         "username" => $_POST['username'],
         "password" => $_POST['password'],
@@ -40,51 +42,47 @@ loadTop('aussieart - Product', 'test'); //title will change based on product sel
         "lastname" => $_POST['lastname'],
         "DOB" => $_POST['DOB'],
         "email" => $_POST['email']);
-            
-    if(isset( $_POST['username'])){
-    $_SESSION["username"] = $_POST['username'];
-    if (isset($_POST['username'])){
-	$exist = 0;
-           //read the file line by line
-          $file = fopen("users.txt","r");
-          while(!feof($file))  {
-                 // get a line without the last “newline” character
-                $line = trim(fgets($file));
-                //compare the content of the input and the line
-               
-			//$exist = 1;
-			break;
-	     		
-              }
-             fclose($file);		 
+    }
+        
+    //LOGIN-----------------------------------------------------    
+    if(!empty( $_POST['usernamel'])){
+    $_SESSION["username"] = $_POST['usernamel'];
+        $exist = 0;
         //check if the input exist
+        $string_data = file_get_contents("users.txt");
+        $explode = explode("<!-- explode -->", $string_data);
+        $count = count($explode);
+        for($i = 0; $i < $count; $i++){
+            $array = unserialize($explode[$i]);
+           echo "i :" . $i;
+                 preshow($array);
+            if ( $array['username'] == $_POST['usernamel']){
+                if($array['password'] == $_POST['passwordl'] ){
+                 $exist = 1;
+            }
+            }
+        }
     if ($exist == 1){
          echo "<script>location.href='home.php';</script>";
     }
     }
-}
-         
-    if (!empty($user['username'])){
-            //read the file line by line
-            $file = fopen("users.txt","r");
-            //check if the input exist
-        //read from users.txt
-        
-            $exist = 0;
     
-           while(!feof($file))  {
-                 // get a line without the last “newline” character
-                $line = trim(fgets($file));
-                //compare the content of the input and the line
-               if($line == $_POST['username']){
-			$exist = 1;
-			break;
-	     }		
-              }
-             fclose($file);
+         //REGISTER-------------------------------------------
+    if (!empty($user['username'])){
+            $exist = 0;
+        //check if the input exist
+        $string_data = file_get_contents("users.txt");
+        $explode = explode("<!-- explode -->", $string_data);
+        $count = count($explode);
+        for($i = 0; $i < $count; $i++){
+            $array = unserialize($explode[$i]);
+            if ( $array['username'] == $_POST['username']){
+                 $exist = 1;
+            }
+        }
     
     if($exist == 1){
-		echo "<br>"."SOMETHING HAPPENEED"."<br>";
+		echo "<br>"."User already exists"."<br>";
 	}else{
         $content = serialize($user);
         file_put_contents("users.txt", $content . "<!-- explode -->", FILE_APPEND);
@@ -94,11 +92,13 @@ loadTop('aussieart - Product', 'test'); //title will change based on product sel
         for($i = 0; $i < $count; $i++){
             $array = unserialize($explode[$i]);
             if ($array){
+                echo "i :" . $i;
                  preshow($array);
             }
         }
     }
-    }  
+    }
+    
 ?>
 </td>
 <?php
