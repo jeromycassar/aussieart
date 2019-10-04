@@ -16,7 +16,7 @@ unset($_POST);
                         <td>
                             <form method="post" action="product.php">
                               <input type="image" src="images/orange.png" id="product-size">
-                              <input type="hidden" name="prodImage" value="images/Orange.png">
+                              <input type="hidden" name="prodImage" value="images/orange.png">
                               <input type="hidden" name="id" value="A001">
                               <input type="hidden" name="desc" value="Experimenting with overlapping shades of orange, this work expresses the languid lines and vibrancy that is orange.<br><br>Acrylic on MDF 20cm x 20cm">
                               <input type="hidden" name="price" value="$220.00">
@@ -178,13 +178,13 @@ unset($_POST);
                     <tr>
                         <td>
                           <form action="product.php" method="post">
-                            <input type="image" src="images/You_re a Funny Girl.png" width="200px" height="200px">
-                            <input type="hidden" name="prodImage" value="images/You're a Funny Girl.png">
+                            <input type="image" src="images/Youre a Funny Girl.png" width="200px" height="200px">
+                            <input type="hidden" name="prodImage" value="images/Youre a Funny Girl.png">
                             <input type="hidden" name="id" value="A008">
                             <input type="hidden" name="desc" value="Acrylic on canvas.<br>100cm x 90cm">
                             <input type="hidden" name="price" value="$450.00">
-                            <input type="hidden" name="prodName" value="You're a Funny Girl">
-                            <input type="hidden" name="artist" value=">Hannah Olivia Potter">
+                            <input type="hidden" name="prodName" value="Youre a Funny Girl">
+                            <input type="hidden" name="artist" value="Hannah Olivia Potter">
                           </form>
                         </td>
                     </tr>

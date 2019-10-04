@@ -195,6 +195,9 @@ if($validate_name === false){
             <a class="invalid">
                 <?php if(isset($_POST["confirm"]) && $validate_address == false){echo "invalid Address";}?></a>
             <br><br>
+            <b>City:</b>
+            <input type="text" placeholder="Melbourne" id="city" name="city" style="float:right;" required>
+            <br><br>
             <b>Phone:</b>
             <input type="text" placeholder="0495846628" name="mobile" required value="<?= $mobile ?>" style="float:right;">
             <a class="invalid">
@@ -211,8 +214,8 @@ if($validate_name === false){
             <a class="invalid">
                 <?php if(isset($_POST["confirm"]) && $validate_time === false){echo $expire_error;}?></a>
             <br><br>
-                <a href="cart.php" class="checkoutbutton">Previous</a>
                 <div><br></div>
+            <a href="cart.php" class="checkoutbutton">Previous</a>
                 <form method="post"><input type="submit" value="confirm" onclick="" class="btn" name='confirm'></form>
         </div>
     </form>
