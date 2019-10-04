@@ -1,7 +1,7 @@
 <?php
 session_start();
 include_once('tools.php');
-loadTop('aussieart - Purchase History', 'test');
+loadTop('aussieart - Purchase History', $_SESSION["username"]);
 ?>
   <td class="body-content"><!--Main Content-->
 
