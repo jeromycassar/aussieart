@@ -1,7 +1,7 @@
 <?php
 session_start();
 include_once('tools.php');
-loadTop('aussieart - Contact Us', 'test');
+loadTop('aussieart - Contact Us', $_SESSION["username"]);
 ?>
   <td class="body-content"><!--Main Content-->
                 <h2>Contact Us</h2>

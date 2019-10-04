@@ -14,8 +14,6 @@ if (isset($_POST["Send"])){
    {
       header("location: products.php");
    }
-    
-    
               // assign varibles to session 
               for ($x=0; $x<count($_SESSION['cart']); $x++) { 
                     $id = $_SESSION['cart'][$x]['prodImage'];
@@ -39,9 +37,9 @@ if (isset($_POST["Send"])){
                        echo $table;         
              }
 
-preshow($_SESSION['cart']);
-
+            //preshow($_SESSION['cart']);
            ?>
+      <a href="checkout.php"><button class="btn" id="submit" type="submit">Proceed to checkout</button></a>
   </td>
 <?php
 loadBottom();

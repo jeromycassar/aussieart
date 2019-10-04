@@ -1,7 +1,7 @@
 <?php
 session_start();
 include_once('tools.php');
-loadTop('aussieart - Catalogue', 'test');
+loadTop('aussieart - Catalogue', $_SESSION["username"]);
 currentStyleNavLink('background-color:rgb(117, 54, 58)');
 unset($_POST);
 ?>

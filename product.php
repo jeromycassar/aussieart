@@ -1,7 +1,7 @@
 <?php
 session_start();
 include_once('tools.php');
-loadTop('aussieart - Product', 'test'); //title will change based on product selection
+loadTop('aussieart - Product', $_SESSION["username"]); //title will change based on product selection
 
 $prodImage = $_POST['prodImage'];
 $price = $_POST['price'];
