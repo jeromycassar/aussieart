@@ -49,4 +49,3 @@ currentStyleNavLink('background-color:rgb(117, 54, 58)');
 <?php
 loadBottom();
 ?>
->>>>>>> jeromy-branch

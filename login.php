@@ -49,7 +49,7 @@ loadTop('aussieart - Product', 'test'); //title will change based on product sel
     $_SESSION["username"] = $_POST['usernamel'];
         $exist = 0;
         //check if the input exist
-        $string_data = file_get_contents("users.txt");
+        $string_data = file_get_contents("database/users.txt");
         $explode = explode("<!-- explode -->", $string_data);
         $count = count($explode);
         for($i = 0; $i < $count; $i++){
@@ -71,7 +71,7 @@ loadTop('aussieart - Product', 'test'); //title will change based on product sel
     if (!empty($user['username'])){
             $exist = 0;
         //check if the input exist
-        $string_data = file_get_contents("users.txt");
+        $string_data = file_get_contents("database/users.txt");
         $explode = explode("<!-- explode -->", $string_data);
         $count = count($explode);
         for($i = 0; $i < $count; $i++){
@@ -85,8 +85,8 @@ loadTop('aussieart - Product', 'test'); //title will change based on product sel
 		echo "<br>"."User already exists"."<br>";
 	}else{
         $content = serialize($user);
-        file_put_contents("users.txt", $content . "<!-- explode -->", FILE_APPEND);
-        $string_data = file_get_contents("users.txt");
+        file_put_contents("database/users.txt", $content . "<!-- explode -->", FILE_APPEND);
+        $string_data = file_get_contents("database/users.txt");
         $explode = explode("<!-- explode -->", $string_data);
         $count = count($explode);
         for($i = 0; $i < $count; $i++){
