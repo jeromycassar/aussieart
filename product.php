@@ -16,7 +16,9 @@ $desc = $_POST['desc'];
     <!--Main Content-->
     <div class="prod-container">
             <div id="prod-left">
-                <a href="products.php" class="btn">&#17; Back</a><br>
+                <p>
+	<a href="javascript:history.go(-1)"  class="btn" title="Return to the previous page">&laquo; back</a>
+</p><br>
                 <img style="margin-top:15px;" src="<?php echo $_POST['prodImage']?>" height="200px" width="200px">
                 <p class="prod-price" name="price">
                     <?php echo $_POST['price']?>

@@ -1,7 +1,7 @@
 <?php
 session_start();
 include_once('tools.php');
-loadTop('aussieart - Product', 'test'); //title will change based on product selection
+loadTopLoginRegister('aussieart - Login'); //title will change based on product selection
 ?>
 <td class="body-content">
     <!--Main Content-->
@@ -102,5 +102,5 @@ loadTop('aussieart - Product', 'test'); //title will change based on product sel
 ?>
 </td>
 <?php
-loadBottom();
+loadBottomLoginRegister();
 ?>

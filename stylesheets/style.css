@@ -635,67 +635,81 @@ h4 {
 
 /*End of Artist Page Layouts*/
 /*Cart Page Layouts*/
-.cart-item{
-  color:rgb(175, 86, 92);
-  font-family:header;
-  word-wrap:normal;
-  background-color:white;
-  border:1px solid rgb(175, 86, 92);
-  border-radius:10px;
-  padding:5px 8px;
+.cart-item {
+    color: rgb(175, 86, 92);
+    font-family: header;
+    word-wrap: normal;
+    background-color: white;
+    border: 1px solid rgb(175, 86, 92);
+    border-radius: 10px;
+    padding: 5px 8px;
 }
-.cart-row{
-  width:auto;
+
+.cart-row {
+    width: auto;
 }
-.cart-details{
-  text-align:left;
-  word-break:normal;
-  width:300px;
-  padding-left:5px;
-  padding-right:5px;
+
+.cart-details {
+    text-align: left;
+    word-break: normal;
+    width: 300px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
-.cart-img{
-  width:100px;
+
+.cart-img {
+    width: 100px;
 }
-.cart-item{
-  margin-bottom:9px;
-  margin-left:auto;
-  margin-right:auto;
+
+.cart-item {
+    margin-bottom: 9px;
+    margin-left: auto;
+    margin-right: auto;
 }
-.cart-price{
-  text-align:center;
-  width:60px;
-  font-size:15pt;
+
+.cart-price {
+    text-align: center;
+    width: 60px;
+    font-size: 15pt;
 }
-.cart-delete{
-  width:20px;
+
+.cart-delete {
+    width: 20px;
 }
-.cart-delete img{
-  margin:0 auto;
+
+.cart-delete img {
+    margin: 0 auto;
 }
-.delete{
-  background-color:transparent;
-  border:none;
-  padding:10px;
-  cursor:pointer;
+
+.delete {
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
 }
-.delete:focus{
-  outline:none;
+
+.delete:focus {
+    outline: none;
 }
-.checkout-btn{
-  display:grid;
-  place-items:center;
-  text-decoration:none;
+
+.checkout-btn {
+    display: grid;
+    place-items: center;
+    text-decoration: none;
 }
-.checkout-btn .btn{
-  padding:15px 10px !important;
+
+.checkout-btn .btn {
+    padding: 15px 10px !important;
 }
-.cart-prices{
-  margin-left:700px;
+
+.cart-prices {
+    margin-left: 700px;
 }
-#h3-cart{
-  text-align:right;
+
+#h3-cart {
+    text-align: right;
 }
+
 /*End of Cart Page Layouts*/
 
 /*Receipt Page Layout*/
@@ -723,7 +737,7 @@ h4 {
     padding-left: 5px;
     padding-right: 5px;
     float: right;
-   
+
 }
 
 receipt-head {
@@ -734,12 +748,13 @@ receipt-head {
     padding-left: 5px;
     padding-right: 5px;
     float: right;
-    
+
 }
 
 .receipt-label {
     color: white;
 }
+
 .receipt {
     margin-bottom: 9px;
     margin-left: auto;
@@ -750,3 +765,81 @@ receipt-head {
     border: 1px solid rgb(175, 86, 92);
 }
 
+
+/*Cart Page Layouts end*/
+/*Home Page regform Layout*/
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+    background-color: #af565c;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    position: fixed;
+    left: 0;
+    right: auto;
+    top: 0;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+   left: 0;
+    right: auto;
+    border: 3px solid #af565c;
+    z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-reg {
+    max-width: 300px;
+    padding: 10px;
+    background-color: white;
+}
+
+/* Full-width input fields */
+.form-reg input[type=text],
+.form-reg input[type=password] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 22px 0;
+    max-width: 200px;
+    border: none;
+    background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-reg input[type=text]:focus,
+.form-reg input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+    max-width: 200px;
+    padding: 16px 20px;
+}
+
+/* Set a style for the submit/login button */
+.form-reg .btn {
+    background-color: #af565c;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 10px;
+    opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-reg .cancelreg {
+    background-color: #af565c;
+}
+
+/* Add some hover effects to buttons */
+.form-reg .btn:hover,
+.open-button:hover {
+    opacity: 1;
+}
