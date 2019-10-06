@@ -172,19 +172,19 @@ td {
 }
 
 #search {
-    padding-top: 2px;
+    padding-top: 2px !important;
 }
 
 #search-bar {
     font-family: header;
     border-radius: 27px;
     border: 1.5px solid rgb(161, 51, 75);
-    height: 15px;
-    padding-left: 10px;
+    height: 15px !important;
+    padding-left: 10px !important;
     color: rgb(231, 101, 129);
-    width: 230px;
+    width: 230px !important;
     transition-duration: 0.5s;
-    font-size: 10pt;
+    font-size: 10pt !important;
 }
 
 #search-bar:hover {
@@ -211,7 +211,7 @@ td {
 .topnav-centered input[type=text] {
     position: absolute;
     left: 41%;
-    padding: 6px;
+    padding: 15px;
     margin-top: 8px;
     font-size: 17px;
     border: none;
@@ -842,4 +842,29 @@ receipt-head {
 .form-reg .btn:hover,
 .open-button:hover {
     opacity: 1;
+}
+
+/* search results */
+.searchresult{
+    max-width: 180px;
+    padding: 10px;
+    background-color: white;
+    position:relative;
+    text-align:center;
+    
+    left:40%;
+    width
+    background: white;
+    border: 3px solid #af565c;
+    border-radius: 5px;
+}
+
+input[type=text],
+.searchresult input[type=password] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 22px 0;
+    max-width: 200px;
+    border: none;
+    background: #f1f1f1;
 }

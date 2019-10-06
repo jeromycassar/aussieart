@@ -42,9 +42,9 @@ function loadTop($title, $username) {
               <a href="products.php">products</a>
               <a href="artists.php">artists</a>
               <div class="topnav-centered">
-                  <form id="search" method="POST">
-                      <input type="text" name="search" id="search-bar" placeholder="search">
-                  </form>
+                  <div id="search">
+                      <input oninput="openResults()" type="text" name="search" id="search-bar" placeholder="search" onclick="this.value='';" onkeyup="search();">
+                  </div>
               </div>
               <div class="topnav-right">
                   <a class="cart-link" href='cart.php'>
@@ -56,10 +56,14 @@ function loadTop($title, $username) {
                   <a href='login.php' style="position:relative; bottom:2px;">log out</a>
               </div>
           </nav>
+          <div id="FormResult">
+          <div class="searchresult">
+            <p id="listing"></p>
+        </div>
+        </div>
           <!--End of Navigation Bar-->
       </header>
       <!--End of header-->
-
       <body>
           <!--Content-->
           <table id="content-table">
@@ -86,7 +90,7 @@ function loadBottom(){
           <ul>
               <li><a href="about.php">about us</a></li>
               <li><a href="contact.php">contact us</a></li>
-              <li><a href="#">site map</a></li>
+              <li><a href="sitemap.php">site map</a></li>
           </ul>
       </td>
       <td>
@@ -218,3 +222,81 @@ function preShow( $arr, $returnAsString=false ) {
 }
 
 ?>
+<script>
+var terms = new Array();
+var max = 9;
+            
+for (i=1;i<=max;i++) { 
+    terms[i] = new Array();
+}
+            
+terms[1]['search'] = 'cart'; 
+terms[1]['des'] = 'Cart Page'; 
+terms[1]['lnk'] = 'cart.php';
+
+terms[2]['search'] = 'home'; 
+terms[2]['des'] = 'Home Page'; 
+terms[2]['lnk'] = 'home.php';
+
+terms[3]['search'] = 'artists artwork paintings'; 
+terms[3]['des'] = 'Artists Page'; 
+terms[3]['lnk'] = 'artists.php';
+
+terms[4]['search'] = 'alli elsisabet palmieri'; 
+terms[4]['des'] = 'Alli Elsisabet Palmieri'; 
+terms[4]['lnk'] = 'artists.php';
+
+terms[5]['search'] = 'clare ellison jakes'; 
+terms[5]['des'] = 'Clare Ellison Jakes'; 
+terms[5]['lnk'] = 'artists.php';
+    
+terms[6]['search'] = 'hannah olivia potter'; 
+terms[6]['des'] = 'Hannah Olivia Potter'; 
+terms[6]['lnk'] = 'artists.php';
+    
+terms[7]['search'] = 'contact us'; 
+terms[7]['des'] = 'Contact us Page'; 
+terms[7]['lnk'] = 'contact.php';
+
+terms[8]['search'] = 'about us'; 
+terms[8]['des'] = 'About us Page'; 
+terms[8]['lnk'] = 'about.php';
+    
+terms[9]['search'] = 'products'; 
+terms[9]['des'] = 'Products Page'; 
+terms[9]['lnk'] = 'products.php';
+    
+    function openResults() {
+        document.getElementById("FormResult").style.display = "block";
+   if (document.getElementById("search-bar").value == ""){
+        document.getElementById("FormResult").style.display = "none";
+    }
+    }
+    
+function search() {
+    
+    var input = document.getElementById('search-bar').value.toLowerCase();
+    var i=0;
+    var list="";
+    var pos=-1;
+                
+    if(input!="") { 
+        for(i=1; i<=max; i++) { 
+            pos= terms[i]['search'].indexOf(input);
+            
+            if(pos!=-1) { 
+                list= list + '<a class="search_lnk" href="'+terms[i]['lnk']+'">' + terms[i]['des'] + '</a>' + '<br>'; 
+            }   
+            pos=-1;
+        }
+        console.log(list);
+        if(list==""){ 
+            document.getElementById("listing").innerHTML = "";
+            document.getElementById("listing").style.display = "none";
+        } else { 
+            document.getElementById("listing").innerHTML = list;
+            document.getElementById("listing").style.display = "block";
+        }
+    }
+}
+</script>

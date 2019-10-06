@@ -1,4 +1,3 @@
-
 <?php
 session_start();
 include_once('tools.php');
@@ -9,52 +8,70 @@ currentStyleNavLink('background-color:rgb(117, 54, 58)');
     <!--Main Content-->
     <div class="home-table">
         <table>
-        <tr>
-            <td></td>
-            <td>
-                <button class="open-button" onclick="openForm()"> Newsletter registration
-                </button>
-                <div class="form-popup" id="myForm">
-                    <form action="home.php" method="POST" class="form-reg">
-                        <label id="home-Title"><strong>Newsletter</strong></label>
-                        <p>subscribe to our newsletter for aussieart updates</p>
+            <tr>
+                <td></td>
+                <td>
+                    <button class="open-button" onclick="openForm()"> Newsletter registration
+                    </button>
+                    <div class="form-popup" id="myForm">
+                        <form action="home.php" method="POST" class="form-reg">
+                            <label id="home-Title"><strong>Newsletter</strong></label>
+                            <p>subscribe to our newsletter for aussieart updates</p>
 
-                        <label id="home-label" for="email"><b>Email</b></label>
-                        <input type="text" placeholder="Enter Email" id="email" name="email" required>
+                            <label id="home-label" for="email"><b>Email</b></label>
+                            <input type="text" placeholder="Enter Email" id="email" name="email" required>
 
-                        <button type="submit" class="btn">Register</button>
-                        <button type="button" class="btn cancelreg" onclick="closeForm()">Close</button>
-                    </form>
-                    <?php
+                            <button type="submit" class="btn">Register</button>
+                            <button type="button" class="btn cancelreg" onclick="closeForm()">Close</button>
+                        </form>
+                        <?php
                         if(!empty($_POST['email'])){
                             $input = ($_POST['email']);
-                           $file = fopen("database/database.txt","a");
+                           $file = fopen("database/registration.txt","a");
 		                  //insert this input (plus a newline) into the database.txt
 		                  fwrite($file,$input."\n");
 		                  //close the "$file"
 		                  fclose($file); 
                         }
                         ?>
-                </div>
-            </td>
-        </tr>
-    </table>
+                    </div>
+                </td>
+            </tr>
+        </table>
         <label id="home-Title"><strong>Mission Statement</strong></label>
         <label id="home-label"><i>"To provide high-quality artworks presented by official artists. We as a company will provide easy shipment and deliveries, catering for all around Australia and internationally.'"</i></label>
         <br>
-        <label id="home-Title"><strong>Browse by Art Style</strong></label>
+        <label id="home-Title"><strong>Browse by Artist</strong></label>
         <table>
             <tr>
-                <td><img src="images/TjapT-1.jpg" id="product-size"></td>
-                <td><img src="images/morwA-1.jpg" id="product-size"></td>
-                <td><img src="images/ThomA-3.jpg" id="product-size"></td>
+                <td>
+                    <form action="artists.php" method="POST">
+                        <input type="image" src="images/Screen Shot 2019-09-30 at 9.19.58 am.png" id="product-size" width="200px" height="200px">
+                        <input type="hidden" name="reveal" value="revealA">
+                        <input type="hidden" name="artist" value="alli_elisabet_palmieri">
+                    </form>
+                </td>
+                <td>
+                    <form action="artists.php" method="POST">
+                        <input type="image" src="images/Screen Shot 2019-09-30 at 8.30.18 am.png" id="product-size" width="200px" height="200px">
+                        <input type="hidden" name="reveal" value="revealB">
+                        <input type="hidden" name="artist" value="clare_ellison_jakes">
+                    </form>
+                </td>
+                <td>
+                    <form action="artists.php" method="POST">
+                        <input type="image" src="images/Screen Shot 2019-09-30 at 8.31.25 am.png" id="product-size" width="200px" height="200px">
+                        <input type="hidden" name="reveal" value="revealC">
+                        <input type="hidden" name="artist" value="hannah_olivia_potter">
+                    </form>
+                </td>
             </tr>
             <tr>
-                <td>Cultural</td>
+                <td>Alli Elisabet</td>
 
-                <td>Sculptures</td>
+                <td>Clare Ellison Jakes</td>
 
-                <td>Abstract</td>
+                <td>Hannah Olivia Potter</td>
             </tr>
         </table>
         <br>

@@ -13,7 +13,7 @@ loadTop('aussieart - Your Receipt', $_SESSION["username"]);
 if (isset($_POST["confirm"])){
 $userdata = array();
     // store varibles
-        $userdata['date'] = date('d/m h:i A');
+        $userdata['date'] = date('d/m/y');
         $userdata['name'] = $_POST['name'];
         $userdata['surname'] = $_POST['surname'];
         $userdata['email'] = $_POST['email'];
@@ -28,11 +28,7 @@ $numItems = count($_SESSION['cart']);
 for($i=0; $i < $numItems; $i++){
 $order[$i] = array_merge($userdata, $_SESSION['cart'][$i]);
 }
-
 }
-
-
-
 ?>
 <td class="body-content">
     <!--Main Content-->

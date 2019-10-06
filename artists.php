@@ -4,6 +4,7 @@ include_once('tools.php');
 loadTop('aussieart - Artists', $_SESSION["username"]);
 currentStyleNavLink('background-color:rgb(117, 54, 58)');
 ?>
+
 <td class="body-content"><!--Main Content-->
   <h2>Artists</h2>
   <button onclick="revealA()" id="revealA" class="link">+Alli Elisabet Palmieri</button><br>
@@ -352,5 +353,25 @@ clickC++;
     document.getElementById("hannah_olivia_potter").style="display:none;";
       document.getElementById("revealC").style="border:1px solid white;";
   }
+    
 });
 </script>
+<?php
+    if(!empty($_POST['artist'])){
+echo '<script>document.getElementById("revealC")
+console.log("reveal C has been clicked");
+clickt = 1;
+  if(clickt==1){
+    console.log("C is now visible. CLICK = "+clickt);
+    document.getElementById("'.$_POST['artist'].'").style="display:inline;";
+    document.getElementById("'.$_POST['reveal'].'").style="border:1px solid rgb(175, 86, 92);";
+  };</script>';
+    }
+unset($_POST['artist']);
+unset($_POST['reveal']);
+?>
+
+
+
+
+
