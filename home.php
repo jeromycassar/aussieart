@@ -15,16 +15,26 @@ currentStyleNavLink('background-color:rgb(117, 54, 58)');
                 <button class="open-button" onclick="openForm()"> Newsletter registration
                 </button>
                 <div class="form-popup" id="myForm">
-                    <form action="/action_page.php" class="form-reg">
+                    <form action="home.php" method="POST" class="form-reg">
                         <label id="home-Title"><strong>Newsletter</strong></label>
                         <p>subscribe to our newsletter for aussieart updates</p>
 
                         <label id="home-label" for="email"><b>Email</b></label>
-                        <input type="text" placeholder="Enter Email" name="email" required>
+                        <input type="text" placeholder="Enter Email" id="email" name="email" required>
 
-                        <button type="submit" class="btn">Login</button>
+                        <button type="submit" class="btn">Register</button>
                         <button type="button" class="btn cancelreg" onclick="closeForm()">Close</button>
                     </form>
+                    <?php
+                        if(!empty($_POST['email'])){
+                            $input = ($_POST['email']);
+                           $file = fopen("database/database.txt","a");
+		                  //insert this input (plus a newline) into the database.txt
+		                  fwrite($file,$input."\n");
+		                  //close the "$file"
+		                  fclose($file); 
+                        }
+                        ?>
                 </div>
             </td>
         </tr>
