@@ -43,7 +43,7 @@ function loadTop($title, $username) {
               <a href="artists.php">artists</a>
               <div class="topnav-centered">
                   <div id="search">
-                      <input oninput="openResults()" type="text" name="search" id="search-bar" placeholder="search" onclick="this.value='';" onkeyup="search();">
+                      <input oninput="openResults()" type="text" name="search" id="search-bar" placeholder="search";" onkeyup="search();">
                   </div>
               </div>
               <div class="topnav-right">
@@ -56,11 +56,11 @@ function loadTop($title, $username) {
                   <a href='login.php' style="position:relative; bottom:2px;">log out</a>
               </div>
           </nav>
-          <div id="FormResult">
-          <div class="searchresult">
+          
+          <div id="FormResult" class="searchresult">
             <p id="listing"></p>
         </div>
-        </div>
+       
           <!--End of Navigation Bar-->
       </header>
       <!--End of header-->
@@ -267,14 +267,16 @@ terms[9]['des'] = 'Products Page';
 terms[9]['lnk'] = 'products.php';
     
     function openResults() {
+   if (document.getElementById("search-bar").value){
         document.getElementById("FormResult").style.display = "block";
-   if (document.getElementById("search-bar").value == ""){
-        document.getElementById("FormResult").style.display = "none";
+        document.getElementById("FormResult").style.visibility = "visible";
+    }else{
+       document.getElementById("FormResult").style.display = "none";
+         document.getElementById("FormResult").style.visibility = "hidden";
+        }
     }
-    }
-    
 function search() {
-    
+    document.getElementById("listing").style.display = "none";
     var input = document.getElementById('search-bar').value.toLowerCase();
     var i=0;
     var list="";
@@ -290,9 +292,10 @@ function search() {
             pos=-1;
         }
         console.log(list);
-        if(list==""){ 
-            document.getElementById("listing").innerHTML = "";
+        if(document.getElementById("search-bar").value === ""){ 
             document.getElementById("listing").style.display = "none";
+            document.getElementById("FormResult").style.visibility = "hidden";
+            document.getElementById("listing").innerHTML = "";
         } else { 
             document.getElementById("listing").innerHTML = list;
             document.getElementById("listing").style.display = "block";

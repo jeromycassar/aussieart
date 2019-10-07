@@ -1,7 +1,7 @@
 <?php
 session_start();
 include_once('tools.php');
-loadTopLoginRegister('aussieart - Product'); //title will change based on product selection
+loadTopLoginRegister('aussieart - Register'); //title will change based on product selection
 ?>
 <!--Main Content-->
 <td class="body-content">
@@ -46,7 +46,7 @@ loadTopLoginRegister('aussieart - Product'); //title will change based on produc
     <script type="text/jscript">
         function CheckPassword() {
             password = document.getElementById('password').value;
-            if (password.length < 6) {
+            if (password.length < 1) {
                 document.getElementById('submit').disabled = true;
                 document.getElementById('submit').innerHTML = "Register";
             } else {

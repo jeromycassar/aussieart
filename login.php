@@ -54,8 +54,6 @@ loadTopLoginRegister('aussieart - Login'); //title will change based on product 
         $count = count($explode);
         for($i = 0; $i < $count; $i++){
             $array = unserialize($explode[$i]);
-           echo "i :" . $i;
-                 preshow($array);
             if ( $array['username'] == $_POST['usernamel']){
                 if($array['password'] == $_POST['passwordl'] ){
                  $exist = 1;
@@ -82,20 +80,10 @@ loadTopLoginRegister('aussieart - Login'); //title will change based on product 
         }
     
     if($exist == 1){
-		echo "<br>"."User already exists"."<br>";
+		echo "<br><div class='login-form'><label id='home-Title'>"."User already exists"."</label></div><br>";
 	}else{
         $content = serialize($user);
         file_put_contents("database/users.txt", $content . "<!-- explode -->", FILE_APPEND);
-        $string_data = file_get_contents("database/users.txt");
-        $explode = explode("<!-- explode -->", $string_data);
-        $count = count($explode);
-        for($i = 0; $i < $count; $i++){
-            $array = unserialize($explode[$i]);
-            if ($array){
-                echo "i :" . $i;
-                 preshow($array);
-            }
-        }
     }
     }
     

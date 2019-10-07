@@ -210,7 +210,7 @@ td {
 
 .topnav-centered input[type=text] {
     position: absolute;
-    left: 41%;
+    left: 43%;
     padding: 15px;
     margin-top: 8px;
     font-size: 17px;
@@ -846,20 +846,20 @@ receipt-head {
 
 /* search results */
 .searchresult{
-    max-width: 180px;
+    max-width: 200px;
     padding: 10px;
     background-color: white;
     position:relative;
     text-align:center;
-    
-    left:40%;
+    visibility: collapse;
+    left: 43%;
     width
     background: white;
     border: 3px solid #af565c;
     border-radius: 5px;
 }
 
-input[type=text],
+.searchresult input[type=text],
 .searchresult input[type=password] {
     width: 100%;
     padding: 10px;
@@ -867,4 +867,14 @@ input[type=text],
     max-width: 200px;
     border: none;
     background: #f1f1f1;
+}
+.FormResult{
+    visibility: hidden;
+}
+
+.search_lnk{
+    font-family: header;
+    color: rgb(175, 86, 92);
+    text-align: center;
+    padding-bottom: 5px;
 }

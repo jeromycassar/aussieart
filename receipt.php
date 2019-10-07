@@ -9,11 +9,11 @@ loadTop('aussieart - Your Receipt', $_SESSION["username"]);
    }
 
 //preshow($_SESSION);
-
+$total = 0.00;
 if (isset($_POST["confirm"])){
 $userdata = array();
     // store varibles
-        $userdata['date'] = date('d/m/y');
+        $userdata['date'] = date('d/m/Y');
         $userdata['name'] = $_POST['name'];
         $userdata['surname'] = $_POST['surname'];
         $userdata['email'] = $_POST['email'];
@@ -25,9 +25,9 @@ $userdata = array();
 $order = array();
 $numItems = count($_SESSION['cart']);
 //merge arrays below
-for($i=0; $i < $numItems; $i++){
-$order[$i] = array_merge($userdata, $_SESSION['cart'][$i]);
-}
+  for($i=0; $i < $numItems; $i++){
+    $order[$i] = array_merge($userdata, $_SESSION['cart'][$i]);
+  }
 }
 ?>
 <td class="body-content">
@@ -58,18 +58,44 @@ $order[$i] = array_merge($userdata, $_SESSION['cart'][$i]);
                     $price = $_SESSION['cart'][$x]['price'];
                     $artist = $_SESSION['cart'][$x]['artist'];
                     $prodName = $_SESSION['cart'][$x]['prodName'];
-                    $img_class = "imgintable";     
                     $total += str_replace('$','', $price);
                     // for every item session echo out the following html and php to store varibles
                     $item =
                     '
                       <tr class="cart-row">
-                        <td class="receipt-details"> <strong>Artwork: </strong>'.$prodName.'<strong>Artist: </strong>'.$artist.'
+                        <td class="receipt-details"> <strong>Artwork: </strong>'.$prodName.'<strong><br>Artist: </strong>'.$artist.'
                         <td class="recipt-price">'.$price.'</td>
                       </tr>
                     ';
                     echo $item;
              }
+             //send order to text file
+             $filename = 'database/orders/'.$_SESSION["username"].'.txt'; //create file name
+             //if file exists, append to that file
+             if (file_exists($filename)) {
+               $file = fopen($filename, 'a');
+               //write to file
+               flock($file, LOCK_EX);
+               foreach($order as $record)
+                 fputcsv($file, $record, chr(9)); //append each file with a tab separator
+               flock($file, LOCK_UN);
+               //close file
+               fclose($file);
+               //echo "<script>alert('File exists and has been written to file');</script>";
+               //if file doesnt exist, create a new file and write to it
+             } else {
+               $file = fopen($filename, 'w');
+               //write to file
+               flock($file, LOCK_EX);
+               foreach($order as $record)
+                 fputcsv($file, $record, chr(9)); //append each file with a tab separator
+               flock($file, LOCK_UN);
+               //close file
+               fclose($file);
+               //echo "<script>alert('Created a new file and has been written to file');</script>";
+             }
+             //reset cart
+             unset($_SESSION['cart']);
             ?>
             <tr class="cart-row">
                 <td></td>
@@ -87,14 +113,19 @@ $order[$i] = array_merge($userdata, $_SESSION['cart'][$i]);
             </tr>
         </table>
     </div>
+    <div style="text-align:center;">
+      <label id="home-label">
+        Thank you for shopping with us! Your estimated delivery is between:<br>
+        <?php
+        $firstDay = date('d/m/Y', time() + (86400*10));
+        $secondDay = date('d/m/Y', time() + (86400*15));
+        echo $firstDay.' - '.$secondDay;
+        ?>
+      </label>
+    </div>
 </td>
 <?php
 loadBottom();
-//preshow($_SESSION['cart']);
+//preShow($order);
 //preshow($_SESSION);
-// unset varibles 
-//$numItems = count($_SESSION['cart']);
-//for($i = 0; $i<$numItems;$i++){
-//unset($_SESSION['cart'][$i]);
-//}
 ?>

@@ -55,4 +55,5 @@ if (isset($_POST["Send"])){
   </td>
 <?php
 loadBottom();
+unset($_POST);
 ?>
