@@ -3,6 +3,11 @@ session_start();
 include_once('tools.php');
 loadTop('aussieart - Artists', $_SESSION["username"]);
 currentStyleNavLink('background-color:rgb(117, 54, 58)');
+
+//if seession unset then return to login
+if(!isset($_SESSION["username"])){
+   echo "<script>window.location.href='login.php';</script>";
+}
 ?>
 
 <td class="body-content"><!--Main Content-->

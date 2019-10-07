@@ -2,6 +2,7 @@
 session_start();
 include_once('tools.php');
 loadTopLoginRegister('aussieart - Login'); //title will change based on product selection
+unset($_SESSION['cart']);
 ?>
 <td class="body-content">
     <!--Main Content-->
@@ -63,10 +64,13 @@ loadTopLoginRegister('aussieart - Login'); //title will change based on product 
     if ($exist == 1){
          echo "<script>location.href='home.php';</script>";
     }
+       if ($exist == 0){
     }
+        }
+    
     
          //REGISTER-------------------------------------------
-    if (!empty($user['username'])){
+    if (!empty($_POST['username'])){
             $exist = 0;
         //check if the input exist
         $string_data = file_get_contents("database/users.txt");
@@ -80,10 +84,10 @@ loadTopLoginRegister('aussieart - Login'); //title will change based on product 
         }
     
     if($exist == 1){
-		echo "<br><div class='login-form'><label id='home-Title'>"."User already exists"."</label></div><br>";
 	}else{
         $content = serialize($user);
         file_put_contents("database/users.txt", $content . "<!-- explode -->", FILE_APPEND);
+        echo "<br><div class='login-form'><label id='home-Title'>"."User added"."</label></div><br>";
     }
     }
     

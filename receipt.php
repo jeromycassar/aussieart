@@ -3,6 +3,11 @@ session_start();
 include_once('tools.php');
 loadTop('aussieart - Your Receipt', $_SESSION["username"]);
 
+//if seession unset then return to login
+if(!isset($_SESSION["username"])){
+   echo "<script>window.location.href='login.php';</script>";
+}
+
  if (!isset($_SESSION["cart"]))
    {
       header("location: products.php");
@@ -10,6 +15,7 @@ loadTop('aussieart - Your Receipt', $_SESSION["username"]);
 
 //preshow($_SESSION);
 $total = 0.00;
+$filename = '../database/orders/'.$_SESSION['username'].'.txt'; //create file name
 if (isset($_POST["confirm"])){
 $userdata = array();
     // store varibles
@@ -60,7 +66,8 @@ $numItems = count($_SESSION['cart']);
                     $prodName = $_SESSION['cart'][$x]['prodName'];
                     $total += str_replace('$','', $price);
                     // for every item session echo out the following html and php to store varibles
-                    $item =
+                preshow($_SESSION);   
+                $item =
                     '
                       <tr class="cart-row">
                         <td class="receipt-details"> <strong>Artwork: </strong>'.$prodName.'<strong><br>Artist: </strong>'.$artist.'
@@ -70,32 +77,28 @@ $numItems = count($_SESSION['cart']);
                     echo $item;
              }
              //send order to text file
-             $filename = 'database/orders/'.$_SESSION["username"].'.txt'; //create file name
+            if(!empty( $_POST['cart'])){
+            $exist = 0;
              //if file exists, append to that file
-             if (file_exists($filename)) {
-               $file = fopen($filename, 'a');
+            $string_data = file_get_contents("database/orders/ben.txt");
+            $explode = explode("<!-- explode -->", $string_data);
+            $count = count($explode);
+            for($i = 0; $i < $count; $i++){
+                $array = unserialize($explode[$i]);
+                if ( $_SESSION["username"] == $_SESSION["username"]){
+                    $exist = 1;
+            }
+            }
+             if ($exist == 1) {
                //write to file
-               flock($file, LOCK_EX);
-               foreach($order as $record)
-                 fputcsv($file, $record, chr(9)); //append each file with a tab separator
-               flock($file, LOCK_UN);
-               //close file
-               fclose($file);
-               //echo "<script>alert('File exists and has been written to file');</script>";
-               //if file doesnt exist, create a new file and write to it
-             } else {
-               $file = fopen($filename, 'w');
-               //write to file
-               flock($file, LOCK_EX);
-               foreach($order as $record)
-                 fputcsv($file, $record, chr(9)); //append each file with a tab separator
-               flock($file, LOCK_UN);
-               //close file
-               fclose($file);
-               //echo "<script>alert('Created a new file and has been written to file');</script>";
+                 $content = serialize($_SESSION['cart']);
+                 echo $content;
+                file_put_contents("database/orders/ben.txt", $content . "<!-- explode -->", FILE_APPEND);
              }
+            }
              //reset cart
              unset($_SESSION['cart']);
+                    
             ?>
             <tr class="cart-row">
                 <td></td>
@@ -126,6 +129,4 @@ $numItems = count($_SESSION['cart']);
 </td>
 <?php
 loadBottom();
-//preShow($order);
-//preshow($_SESSION);
 ?>

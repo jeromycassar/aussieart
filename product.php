@@ -3,6 +3,11 @@ session_start();
 include_once('tools.php');
 loadTop('aussieart - Product', $_SESSION["username"]); //title will change based on product selection
 
+//if seession unset then return to login
+if(!isset($_SESSION["username"])){
+   echo "<script>window.location.href='login.php';</script>";
+}
+
 $prodImage = $_POST['prodImage'];
 $price = $_POST['price'];
 $artist = $_POST['artist'];

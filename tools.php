@@ -18,6 +18,8 @@ function loadTop($title, $username) {
       <meta charset="utf-8">
       <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
       <script type="text/javascript" src="js/script.js"></script>
+      <meta name="description" content="Shop at our online store for artistic pieces created by our national Australian artists!">
+      <meta name="keywords" content="art, artworks, Australian art, paintings, acryllic, canvas, MDF, aussieart.com.au, Australia">
   </head>
   <!--End of head-->
   <div class="wrapper">
@@ -224,7 +226,7 @@ function preShow( $arr, $returnAsString=false ) {
 ?>
 <script>
 var terms = new Array();
-var max = 9;
+var max = 10;
             
 for (i=1;i<=max;i++) { 
     terms[i] = new Array();
@@ -262,9 +264,13 @@ terms[8]['search'] = 'about us';
 terms[8]['des'] = 'About us Page'; 
 terms[8]['lnk'] = 'about.php';
     
-terms[9]['search'] = 'products'; 
+terms[9]['search'] = 'products paintings artwork'; 
 terms[9]['des'] = 'Products Page'; 
 terms[9]['lnk'] = 'products.php';
+    
+terms[10]['search'] = 'site map link tabs navigation'; 
+terms[10]['des'] = 'Site Map'; 
+terms[10]['lnk'] = 'sitemap.php';
     
     function openResults() {
    if (document.getElementById("search-bar").value){

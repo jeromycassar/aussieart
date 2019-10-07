@@ -3,6 +3,11 @@ session_start();
 include_once('tools.php');
 loadTop('aussieart - Home', $_SESSION["username"]);
 currentStyleNavLink('background-color:rgb(117, 54, 58)');
+
+//if seession unset then return to login
+if(!isset($_SESSION["username"])){
+   echo "<script>window.location.href='login.php';</script>";
+}
 ?>
 <td class="body-content">
     <!--Main Content-->
@@ -17,6 +22,9 @@ currentStyleNavLink('background-color:rgb(117, 54, 58)');
                         <form action="home.php" method="POST" class="form-reg">
                             <label id="home-Title"><strong>Newsletter</strong></label>
                             <p>subscribe to our newsletter for aussieart updates</p>
+                             
+                            <label id="home-label" for="name"><b>Name</b></label>
+                            <input type="text" placeholder="Enter Name" id="name" name="name" required>
 
                             <label id="home-label" for="email"><b>Email</b></label>
                             <input type="text" placeholder="Enter Email" id="email" name="email" required>
@@ -24,9 +32,9 @@ currentStyleNavLink('background-color:rgb(117, 54, 58)');
                             <button type="submit" class="btn">Register</button>
                             <button type="button" class="btn cancelreg" onclick="closeForm()">Close</button>
                         </form>
-                        <?php
+                        <?php 
                         if(!empty($_POST['email'])){
-                            $input = ($_POST['email']);
+                            $input = ($_POST['name'].",".$_POST['email']);
                            $file = fopen("database/registration.txt","a");
 		                  //insert this input (plus a newline) into the database.txt
 		                  fwrite($file,$input."\n");

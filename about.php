@@ -2,6 +2,11 @@
 session_start();
 include_once('tools.php');
 loadTop('aussieart - About Us', $_SESSION["username"]);
+
+//if seession unset then return to login
+if(!isset($_SESSION["username"])){
+   echo "<script>window.location.href='login.php';</script>";
+}
 ?>
 <td class="body-content">
     <!--Main Content-->

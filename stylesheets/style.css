@@ -200,6 +200,10 @@ td {
     float: right;
 }
 
+.nav-bar a:focus, .nav-bar input[type=text]:focus{
+  outline:none;
+}
+
 .topnav-centered a {
     float: none;
     position: absolute;
@@ -878,3 +882,25 @@ receipt-head {
     text-align: center;
     padding-bottom: 5px;
 }
+/*Sitemap Styles*/
+.sitemap-table{
+  display:grid;
+  place-items:center;
+  font-family:header;
+}
+.sitemap-table td{
+  height:50px;
+  width:120px;
+  padding:5px 10px;
+}
+.sitemap-table td a, .sitemap-table th{
+color:rgb(175, 86, 92);
+text-decoration:none;
+}
+.sitemap-table tr{
+  height:50px;
+}
+.sitemap-table td a:hover{
+  text-decoration:underline;
+}
+/*End of Sitemap Styles*/

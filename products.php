@@ -4,6 +4,11 @@ include_once('tools.php');
 loadTop('aussieart - Catalogue', $_SESSION["username"]);
 currentStyleNavLink('background-color:rgb(117, 54, 58)');
 unset($_POST);
+
+//if seession unset then return to login
+if(!isset($_SESSION["username"])){
+   echo "<script>window.location.href='login.php';</script>";
+}
 ?>
 <td class="body-content">
     <!--Main Content-->

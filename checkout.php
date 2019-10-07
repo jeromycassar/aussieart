@@ -1,8 +1,14 @@
 <?php
 session_start();
 include_once('tools.php');
-loadTop('aussieart - Checkout', $_SESSION["username"]); //title will change based on product selection
+loadTop('aussieart - Checkout', $_SESSION["username"]); //title will change based on 
 
+//if seession unset then return to login
+if(!isset($_SESSION["username"])){
+   echo "<script>window.location.href='login.php';</script>";
+}
+
+product selection
 $name = $surname = $email = $address = $mobile = $card = $expire = $city = "";
 $validate_name = $validate_surname = $validate_email = $validate_address = $validate_mobile = $validate_card = $validate_card = $validate_city = "";
 if(!isset($_SESSION['cart'])){
