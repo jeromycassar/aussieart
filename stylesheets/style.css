@@ -649,6 +649,17 @@ h4 {
     padding: 5px 8px;
 }
 
+.cart-btn {
+    color: rgb(175, 86, 92);
+    font-family: header;
+    word-wrap: normal;
+    background-color: white;
+    border: 1px solid rgb(175, 86, 92);
+    border-radius: 10px;
+    padding: 5px 8px;
+    width: auto;
+}
+
 .cart-row {
     width: auto;
 }
@@ -807,7 +818,7 @@ receipt-head {
 
 /* Full-width input fields */
 .form-reg input[type=text],
-.form-reg input[type=password] {
+.form-reg input[type=email] {
     width: 100%;
     padding: 10px;
     margin: 5px 0 22px 0;

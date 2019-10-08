@@ -3,10 +3,9 @@ session_start();
 include_once('tools.php');
 loadTop('aussieart - Artists', $_SESSION["username"]);
 currentStyleNavLink('background-color:rgb(117, 54, 58)');
-
-//if seession unset then return to login
-if(!isset($_SESSION["username"])){
-   echo "<script>window.location.href='login.php';</script>";
+//check if the user has remained signed in
+if(!isset($_SESSION['username'])){
+  echo '<script>window.location.href = "login.php";</script>';
 }
 ?>
 
@@ -319,7 +318,7 @@ var clickC = 1;
 document.getElementById("revealA").addEventListener("click", function() {
 console.log("reveal A has been clicked");
 clickA++;
-  if(clickA%2==0){
+  if(clickA % 2 == 0){
     console.log("A is now visible. CLICK = "+clickA);
     document.getElementById("alli_elisabet_palmieri").style="display:inline; transition-duration:0.5s;";
     document.getElementById("revealA").style="border:1px solid rgb(175, 86, 92);";
@@ -334,7 +333,7 @@ clickA++;
 document.getElementById("revealB").addEventListener("click", function() {
 console.log("reveal B has been clicked");
 clickB++;
-  if(clickB%2==0){
+  if(clickB % 2 == 0){
     console.log("B is now visible. CLICK = "+clickB);
     document.getElementById("clare_ellison_jakes").style="display:inline;";
     document.getElementById("revealB").style="border:1px solid rgb(175, 86, 92);";
@@ -349,7 +348,7 @@ clickB++;
 document.getElementById("revealC").addEventListener("click", function() {
 console.log("reveal C has been clicked");
 clickC++;
-  if(clickC%2==0){
+  if(clickC % 2 == 0){
     console.log("C is now visible. CLICK = "+clickC);
     document.getElementById("hannah_olivia_potter").style="display:inline;";
     document.getElementById("revealC").style="border:1px solid rgb(175, 86, 92);";
@@ -358,25 +357,34 @@ clickC++;
     document.getElementById("hannah_olivia_potter").style="display:none;";
       document.getElementById("revealC").style="border:1px solid white;";
   }
-    
+
 });
 </script>
 <?php
     if(!empty($_POST['artist'])){
-echo '<script>document.getElementById("revealC")
-console.log("reveal C has been clicked");
-clickt = 1;
-  if(clickt==1){
-    console.log("C is now visible. CLICK = "+clickt);
+echo '<script>
+console.log("'.$_POST['reveal'].' has been clicked");
+clickt = 2;
+  if(clickt==2){
+    console.log("'.$_POST['reveal'].' is now visible. CLICKT = "+clickt);
     document.getElementById("'.$_POST['artist'].'").style="display:inline;";
     document.getElementById("'.$_POST['reveal'].'").style="border:1px solid rgb(175, 86, 92);";
-  };</script>';
+
+    document.getElementById("'.$_POST['reveal'].'").addEventListener("click", function() {
+    console.log("'.$_POST['reveal'].' has been clicked");
+    clickt++;
+      if(clickt % 2 == 0){
+        console.log("'.$_POST['reveal'].' is now visible. CLICKT = "+clickt);
+        document.getElementById("'.$_POST['artist'].'").style="display:inline;";
+        document.getElementById("'.$_POST['reveal'].'").style="border:1px solid rgb(175, 86, 92);";
+      }else{
+        console.log("'.$_POST['reveal'].' is now hidden. CLICKT = "+clickt);
+        document.getElementById("'.$_POST['artist'].'").style="display:none;";
+          document.getElementById("'.$_POST['reveal'].'").style="border:1px solid white;";
+      }
+    });
+  }</script>';
     }
 unset($_POST['artist']);
 unset($_POST['reveal']);
 ?>
-
-
-
-
-

@@ -48,6 +48,16 @@ $desc = $_POST['desc'];
             <input type="hidden"name="desc" value="<?= $desc?>">
            <button type="submit" class="btn" name='Send'>Add to Cart</button>
         </form>
+        
+        <form method="post" target="_self" action="wishlist.php" name="wishlist">
+            <input type="hidden" name="prodImage" value="<?= $prodImage?>">
+            <input type="hidden" name="price" value="<?= $price?>">
+            <input type="hidden" name="artist" value="<?= $artist?>">
+            <input type="hidden"name="prodName" value="<?= $prodName?>">
+            <input type="hidden"name="desc" value="<?= $desc?>">
+           <button type="submit" class="btn" name='wishlist'>Add to Wishlist</button>
+        </form>
+        
     </div>
 </td>
 <?php

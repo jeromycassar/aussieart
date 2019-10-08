@@ -2,8 +2,8 @@
 //--PHP FRAMEWORKS--
 function loadTop($title, $username) {
   //get cart
-  if(isset($_SESSION['cart'])){
-    $cartNum = count($_SESSION['cart']);
+  if(isset($_SESSION['totalcart'])){
+    $cartNum = count($_SESSION['totalcart']);
   } else {
     $cartNum = 0;
   }
@@ -92,6 +92,8 @@ function loadBottom(){
           <ul>
               <li><a href="about.php">about us</a></li>
               <li><a href="contact.php">contact us</a></li>
+              <li><a href="wishlist.php">Wish List</a></li>
+              <li><a href="purchaseHistory.php">Purchase History</a></li>
               <li><a href="sitemap.php">site map</a></li>
           </ul>
       </td>
@@ -226,7 +228,7 @@ function preShow( $arr, $returnAsString=false ) {
 ?>
 <script>
 var terms = new Array();
-var max = 10;
+var max = 12;
             
 for (i=1;i<=max;i++) { 
     terms[i] = new Array();
@@ -271,6 +273,14 @@ terms[9]['lnk'] = 'products.php';
 terms[10]['search'] = 'site map link tabs navigation'; 
 terms[10]['des'] = 'Site Map'; 
 terms[10]['lnk'] = 'sitemap.php';
+    
+terms[11]['search'] = 'wish list'; 
+terms[11]['des'] = 'Wish list'; 
+terms[11]['lnk'] = 'wishlist.php';
+    
+terms[12]['search'] = 'purchase history orders'; 
+terms[12]['des'] = 'Purchase History'; 
+terms[12]['lnk'] = 'purchaseHistory.php';
     
     function openResults() {
    if (document.getElementById("search-bar").value){

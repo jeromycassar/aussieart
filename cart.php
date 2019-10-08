@@ -10,22 +10,52 @@ if(!isset($_SESSION["username"])){
 }
 ?>
   <td class="body-content"><!--Main Content-->
+       <h2>Cart</h2><br>
      <?php
+      if (isset($_POST["clear"])){
+   unset($_SESSION['cart']);
+unset($_SESSION['totalcart']);
+unset($_SESSION['mycart']);
+}
+      
+      
      $total = 0.00;
       // post to session (add to cart)
 if (isset($_POST["Send"])){
   $_SESSION['cart'][]=$_POST;
 }
-  if (!isset($_SESSION["cart"]))
+      
+if(isset($_SESSION['wishlist']) and isset($_SESSION['cart']) ){
+  $_SESSION['totalcart']= array_merge($_SESSION['cart'],$_SESSION['wishlist']);
+}elseif(isset($_SESSION['cart']) and isset($_SESSION['mycart']) ){
+    $_SESSION['totalcart']=  $_SESSION['mycart'];
+    $_SESSION['totalcart']= array_merge($_SESSION['mycart'],$_SESSION['cart']);
+}elseif(isset($_SESSION['wishlist']) and isset($_SESSION['mycart']) ){
+    $_SESSION['totalcart']=  $_SESSION['mycart'];
+    $_SESSION['totalcart']= array_merge($_SESSION['mycart'],$_SESSION['wishlist']);
+}elseif(isset($_SESSION['cart'])){
+    $_SESSION['totalcart']=$_SESSION['cart'];
+}elseif(isset($_SESSION['wishlist'])){
+    $_SESSION['totalcart']=$_SESSION['wishlist'];
+}
+
+     // echo "cart----------------------------------------------";
+     // preshow($_SESSION['cart']);
+      //echo "whishlist-----------------------------------------";
+     // preshow($_SESSION['wishlist']);
+      // echo "totalcart-----------------------------------------";
+     // preshow($_SESSION['totalcart']);
+      
+  if (!isset($_SESSION["totalcart"]))
    {
-      header("location: products.php");
+      echo "<script>window.location.href='home.php';</script>";
    }else{
               // assign varibles to session
-              for ($x = 0; $x < count($_SESSION['cart']); $x++) {
-                    $id = $_SESSION['cart'][$x]['prodImage'];
-                    $price = $_SESSION['cart'][$x]['price'];
-                    $artist = $_SESSION['cart'][$x]['artist'];
-                    $name = $_SESSION['cart'][$x]['prodName'];
+              for ($x = 0; $x < count($_SESSION['totalcart']); $x++) {
+                    $id = $_SESSION['totalcart'][$x]['prodImage'];
+                    $price = $_SESSION['totalcart'][$x]['price'];
+                    $artist = $_SESSION['totalcart'][$x]['artist'];
+                    $name = $_SESSION['totalcart'][$x]['prodName'];
                     $img_class = "imgintable";
                     $dollar = "$";
                     // for every item session echo out the following html and php to store varibles
@@ -35,7 +65,6 @@ if (isset($_POST["Send"])){
                         <td class="cart-img"><img src="'.$id.'" width="100px" height="100px"></td>
                         <td class="cart-details">'.$name.'<br><br>'.$artist.'</td>
                         <td class="cart-price">'.$price.'</td>
-                        <td class="cart-delete"><button class="delete"><img src="images/delete.png" width="20px" height="20px"></button></td>
                       </tr>
                     </table>';
                     echo $item;
@@ -56,7 +85,13 @@ if (isset($_POST["Send"])){
                <td><h3 class="cart-prices" id="h3-cart">Total: <?php echo '$'.number_format(($total+5.00),2)?></h3></td>
              </tr>
            </table>
-           <a href="checkout.php" class="checkout-btn"><button class="btn" id="submit" type="submit">Proceed to checkout</button></a>
+      <table class="login-form">
+             <tr>
+                 <td><a href="checkout.php" class="checkout-btn"><button class="btn" id="submit" type="submit">Proceed to checkout</button></a></td>
+                 <td></td>
+                 <td><form method="POST"><button class="btn" id="clear" name="clear" type="submit">Empty Cart</button></form></td>
+             </tr>
+           </table>
   </td>
 <?php
 loadBottom();

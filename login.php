@@ -3,6 +3,9 @@ session_start();
 include_once('tools.php');
 loadTopLoginRegister('aussieart - Login'); //title will change based on product selection
 unset($_SESSION['cart']);
+unset($_SESSION['wishlist']);
+unset($_SESSION['totalcart']);
+unset($_SESSION['mycart']);
 ?>
 <td class="body-content">
     <!--Main Content-->

@@ -27,7 +27,7 @@ if(!isset($_SESSION["username"])){
                             <input type="text" placeholder="Enter Name" id="name" name="name" required>
 
                             <label id="home-label" for="email"><b>Email</b></label>
-                            <input type="text" placeholder="Enter Email" id="email" name="email" required>
+                            <input type="email" placeholder="Enter Email" id="email" name="email" required>
 
                             <button type="submit" class="btn">Register</button>
                             <button type="button" class="btn cancelreg" onclick="closeForm()">Close</button>

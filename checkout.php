@@ -8,10 +8,10 @@ if(!isset($_SESSION["username"])){
    echo "<script>window.location.href='login.php';</script>";
 }
 
-product selection
+//product selection
 $name = $surname = $email = $address = $mobile = $card = $expire = $city = "";
 $validate_name = $validate_surname = $validate_email = $validate_address = $validate_mobile = $validate_card = $validate_card = $validate_city = "";
-if(!isset($_SESSION['cart'])){
+if(!isset($_SESSION['totalcart'])){
   header("Location: cart.php");
   exit;
 }
