@@ -12,10 +12,13 @@ if(!isset($_SESSION["username"])){
   <td class="body-content"><!--Main Content-->
        <h2>Cart</h2><br>
      <?php
+      $_SESSION['wishlistadd']=$_SESSION['wishlist'];
+      
       if (isset($_POST["clear"])){
    unset($_SESSION['cart']);
 unset($_SESSION['totalcart']);
 unset($_SESSION['mycart']);
+unset($_SESSION['wishlistadd']);
 }
       
       
@@ -25,26 +28,26 @@ if (isset($_POST["Send"])){
   $_SESSION['cart'][]=$_POST;
 }
       
-if(isset($_SESSION['wishlist']) and isset($_SESSION['cart']) ){
-  $_SESSION['totalcart']= array_merge($_SESSION['cart'],$_SESSION['wishlist']);
+if(isset($_SESSION['wishlistadd']) and isset($_SESSION['cart']) ){
+  $_SESSION['totalcart']= array_merge($_SESSION['cart'],$_SESSION['wishlistadd']);
 }elseif(isset($_SESSION['cart']) and isset($_SESSION['mycart']) ){
     $_SESSION['totalcart']=  $_SESSION['mycart'];
     $_SESSION['totalcart']= array_merge($_SESSION['mycart'],$_SESSION['cart']);
-}elseif(isset($_SESSION['wishlist']) and isset($_SESSION['mycart']) ){
+}elseif(isset($_SESSION['wishlistadd']) and isset($_SESSION['mycart']) ){
     $_SESSION['totalcart']=  $_SESSION['mycart'];
-    $_SESSION['totalcart']= array_merge($_SESSION['mycart'],$_SESSION['wishlist']);
+    $_SESSION['totalcart']= array_merge($_SESSION['mycart'],$_SESSION['wishlistadd']);
 }elseif(isset($_SESSION['cart'])){
     $_SESSION['totalcart']=$_SESSION['cart'];
 }elseif(isset($_SESSION['wishlist'])){
-    $_SESSION['totalcart']=$_SESSION['wishlist'];
+    $_SESSION['totalcart']=$_SESSION['wishlistadd'];
 }
 
-     // echo "cart----------------------------------------------";
-     // preshow($_SESSION['cart']);
-      //echo "whishlist-----------------------------------------";
-     // preshow($_SESSION['wishlist']);
-      // echo "totalcart-----------------------------------------";
-     // preshow($_SESSION['totalcart']);
+      echo "cart----------------------------------------------";
+      preshow($_SESSION['cart']);
+      echo "whishlist-----------------------------------------";
+      preshow($_SESSION['wishlist']);
+       echo "totalcart-----------------------------------------";
+      preshow($_SESSION['totalcart']);
       
   if (!isset($_SESSION["totalcart"]))
    {

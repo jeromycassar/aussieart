@@ -7,6 +7,9 @@ if(!isset($_SESSION['username'])){
   echo '<script>window.location.href = "login.php";</script>';
 }
 ?>
+<meta name="description" content="Fill out a form to get in touch with us with any queries or questions!">
+<meta name="keywords" content="AussieArt, email, phone, phone number, contact, contact us, contact details, complaints, questions, queries, help">
+
   <td class="body-content"><!--Main Content-->
                 <h2>Contact Us</h2>
                 <br>

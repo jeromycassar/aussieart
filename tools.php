@@ -18,8 +18,6 @@ function loadTop($title, $username) {
       <meta charset="utf-8">
       <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
       <script type="text/javascript" src="js/script.js"></script>
-      <meta name="description" content="Shop at our online store for artistic pieces created by our national Australian artists!">
-      <meta name="keywords" content="art, artworks, Australian art, paintings, acryllic, canvas, MDF, aussieart.com.au, Australia">
   </head>
   <!--End of head-->
   <div class="wrapper">
@@ -43,12 +41,14 @@ function loadTop($title, $username) {
               <a href="home.php">home</a>
               <a href="products.php">products</a>
               <a href="artists.php">artists</a>
+              
               <div class="topnav-centered">
                   <div id="search">
                       <input oninput="openResults()" type="text" name="search" id="search-bar" placeholder="search";" onkeyup="search();">
                   </div>
               </div>
               <div class="topnav-right">
+              <a href="wishlist.php">Wish List</a>
                   <a class="cart-link" href='cart.php'>
                       <div class="cart-wrapper">
                           <span id="cart-num">$cartNum</span>
@@ -92,7 +92,6 @@ function loadBottom(){
           <ul>
               <li><a href="about.php">about us</a></li>
               <li><a href="contact.php">contact us</a></li>
-              <li><a href="wishlist.php">Wish List</a></li>
               <li><a href="purchaseHistory.php">Purchase History</a></li>
               <li><a href="sitemap.php">site map</a></li>
           </ul>

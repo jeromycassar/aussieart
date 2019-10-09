@@ -4,9 +4,14 @@ include_once('tools.php');
 loadTopLoginRegister('aussieart - Login'); //title will change based on product selection
 unset($_SESSION['cart']);
 unset($_SESSION['wishlist']);
+unset($_SESSION['wishlistadd']);
 unset($_SESSION['totalcart']);
 unset($_SESSION['mycart']);
+unset($_SESSION['purchase']);
 ?>
+<meta name="description" content="Log in to AussieArt to purchase art.">
+<meta name="keywords" content="AussieArt, Login, log in, Sign in, Signin, Account, Signup, Sign Up, register">
+
 <td class="body-content">
     <!--Main Content-->
     <h2>Login</h2>

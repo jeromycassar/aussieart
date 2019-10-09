@@ -25,6 +25,7 @@ if(!isset($_SESSION["username"])){
     if (!isset($_SESSION["wishlist"]))
         {
             echo "<label class='login-form' id='home-Title'>Your wishlist is empty.</label>";
+        echo "<p class='register-form'>You haven't added a product to your wishlist yet!";
             }else{
               // assign varibles to session
               for ($x = 0; $x < count($_SESSION['wishlist']); $x++) {

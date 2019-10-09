@@ -8,6 +8,9 @@ if(!isset($_SESSION["username"])){
    echo "<script>window.location.href='login.php';</script>";
 }
 ?>
+<meta name="description" content="Find out more about who we are here at AussieArt.">
+<meta name="keywords" content="AussieArt, team, about, about us, mission statement, location">
+
 <td class="body-content">
     <!--Main Content-->
     <h2>About Us</h2><br>

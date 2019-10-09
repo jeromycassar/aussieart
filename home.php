@@ -9,6 +9,10 @@ if(!isset($_SESSION["username"])){
    echo "<script>window.location.href='login.php';</script>";
 }
 ?>
+<meta name="description" content="Shop online for a wide range of art direct from Australian Artists.">
+<meta name="keywords" content="Australian Art, Australia,
+aussieart.com.au, Art, Painting, Interior, Home Decor, Homewares, Artist, Australian Artist, Abstract Art, Interior Design, Interior Architecture, Prints, Wall Art">
+
 <td class="body-content">
     <!--Main Content-->
     <div class="home-table">
@@ -22,7 +26,7 @@ if(!isset($_SESSION["username"])){
                         <form action="home.php" method="POST" class="form-reg">
                             <label id="home-Title"><strong>Newsletter</strong></label>
                             <p>subscribe to our newsletter for aussieart updates</p>
-                             
+
                             <label id="home-label" for="name"><b>Name</b></label>
                             <input type="text" placeholder="Enter Name" id="name" name="name" required>
 
